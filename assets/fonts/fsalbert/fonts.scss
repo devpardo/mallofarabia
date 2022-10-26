@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('~assets/fonts/fsalbert/FSAlbert Regular.eot');
+    src: url('~assets/fonts/fsalbert/FSAlbert Regular.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/fsalbert/FSAlbert Regular.woff2') format('woff2'),
+        url('~assets/fonts/fsalbert/FSAlbert Regular.woff') format('woff'),
+        url('~assets/fonts/fsalbert/FSAlbert Regular.ttf') format('truetype');
+    font-weight: initial;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('~assets/fonts/fsalbert/FSAlbert-Bold.eot');
+    src: url('~assets/fonts/fsalbert/FSAlbert-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/fsalbert/FSAlbert-Bold.woff2') format('woff2'),
+        url('~assets/fonts/fsalbert/FSAlbert-Bold.woff') format('woff'),
+        url('~assets/fonts/fsalbert/FSAlbert-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

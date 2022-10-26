@@ -2,3 +2,40 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+$body-font-family: 'Graphik', sans-serif !default;
+$font-family: 'Graphik', sans-serif !default;
+
+
+body, html 
+.v-application {
+
+    font-family: $body-font-family !important;
+
+
+    h1, .text-h1,
+    h2, .text-h2,
+    h3, .text-h3,
+    h4, .text-h4,
+    h5, .text-h5,
+    h6, .text-h6,
+    
+    .display-4,
+    .display-3,
+    .display-2,
+    .display-1,
+    .headline,
+    .title,
+    .subtitle-2
+    {
+        font-family: $body-font-family !important;
+        font-weight: bold;
+    }
+    
+    .body-1,
+    .body-2,
+    .caption,
+    .overline
+    {
+        font-family: $body-font-family !important;
+    }
+}
