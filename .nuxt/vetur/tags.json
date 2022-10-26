@@ -1,11 +1,8 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "Jumbotron": {
+    "description": "Auto imported from components/Jumbotron.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
-  },
-  "VuetifyLogo": {
-    "description": "Auto imported from components/VuetifyLogo.vue"
+  "BaseAppNavbar": {
+    "description": "Auto imported from components/base/AppNavbar.vue"
   }
 }
