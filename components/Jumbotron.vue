@@ -1,6 +1,6 @@
 <template>
-    <div class="jumbotron">
-    </div>
+    <v-container fluid class="jumbotron">
+    </v-container>
 </template>
 
 <script>
@@ -12,5 +12,7 @@ export default {
 <style scoped>
 .jumbotron {
     height: 600px;
+    background-color: red;
+    margin-bottom: 3em;
 }
 </style>

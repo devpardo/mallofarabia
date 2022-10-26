@@ -1,43 +1,32 @@
 <template>
     <v-sheet class="top-nav">
-        <v-container fluid>
-            <v-row no-gutters>
-                <v-col cols="5" class="text-center">
-                    <div class="d-flex">
-                        <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in linksLeft" :key="index">
-                            <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
-                        </div>
-                    </div>
-                </v-col>
-                <v-col cols="2" class="d-flex align-center justify-center">
-                    <div class="logo pa-2">
-                        <div class="d-flex align-center justify-center ">
-                            <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
-                        </div>
-                    </div>
-                </v-col>
-                <v-col cols="5" class="text-center">
-                    <div class="d-flex">
-                        <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in linksRight" :key="index">
-                            <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
-                        </div>
-                    </div>
-                </v-col>
-            </v-row>
+        <v-container class="desktop-menu">
+            <DesktopMenu :links="{linksLeft, linksRight}" />
         </v-container>
 
-        <v-container fluid class="px-5">
+        <v-container class="tab-menu"> 
+            <TabMenu :links="allLinks" />
+        </v-container>
+
+        <v-container class="t-0">
             <div class="main-links d-flex align-start justify-start">
-                <v-btn v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item" text>{{ item.name }}</v-btn>
-                <v-btn class="ml-auto text-capitalize link-item" text>EN</v-btn>
+                <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a>
+                <v-btn class="ml-auto text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
             </div>
         </v-container>
     </v-sheet>
 </template>
 
 <script>
+import DesktopMenu from '@/components/base/DesktopMenu'
+import TabMenu from '@/components/base/TabMenu'
+
 export default {
     name: 'AppNavbar',
+    components: {
+        DesktopMenu,
+        TabMenu
+    },
     data() {
         return {
             linksLeft: [
@@ -64,6 +53,14 @@ export default {
                 { name: 'Offers', children: [] }
             ]
         }
+    },
+    computed: {
+        vb() {
+            return this.$vuetify.breakpoint;
+        },
+        allLinks() {
+            return [...this.linksLeft, ...this.linksRight]
+        }
     }
 }
 </script>
@@ -72,26 +69,64 @@ export default {
 
 .top-nav {
     min-height: 113px;
+}
 
-    .toplink-item {
-        padding: 50px 0;
-        font-size: 14px;
-
-        .icon {
-            font-size: 15px;
-            color: $charcoal-grey;
-        }
+@media (min-width: 320px) {
+    .desktop-menu {
+        display: none
     }
 
-    .logo {
-        width: 100%;
-    }
-    
-    .main-link {
-        .link-item {
-            font-size: 16px;
-        }
+    .tab-menu {
+        display: none;
     }
 }
 
+@media (min-width: 480px) {
+    
+}
+
+
+@media (min-width: 600px) {
+    
+}
+
+@media (min-width: 768px) {
+   
+}
+
+@media (min-width: 960px) {
+     .desktop-menu {
+        display: none
+    }
+
+    .tab-menu {
+        display: block;
+    }
+
+    .container {
+        max-width: 940px;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .container {
+        max-width: 1185px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .desktop-menu {
+        display: block
+    }
+
+    .tab-menu {
+        display: none;
+    }
+
+    .container {
+        max-width: 1185px;
+    }
+}
 </style>

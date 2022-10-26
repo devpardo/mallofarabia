@@ -2,9 +2,9 @@
   <v-app>
     <v-main>
       <AppNavbar />
-      <v-container class="debug px-7" fluid>
+      <div>
         <Nuxt />
-      </v-container>
+      </div>
     </v-main>
   </v-app>
 </template>
@@ -25,9 +25,6 @@ export default {
 </script>
 
 <style>
-.debug {
-  border: 1px solid red;
-}
 </style>
 
 

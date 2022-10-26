@@ -2,7 +2,16 @@
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },
+  "WhatsHappening": {
+    "description": "Auto imported from components/WhatsHappening.vue"
+  },
   "BaseAppNavbar": {
     "description": "Auto imported from components/base/AppNavbar.vue"
+  },
+  "BaseDesktopMenu": {
+    "description": "Auto imported from components/base/DesktopMenu.vue"
+  },
+  "BaseTabMenu": {
+    "description": "Auto imported from components/base/TabMenu.vue"
   }
 }
