@@ -1,5 +1,12 @@
 [
   {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_27a4e472"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
