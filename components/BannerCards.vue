@@ -2,7 +2,7 @@
     <v-container class="mb-10">
         <v-row>
             <v-col cols="12" md="6">
-                <v-card color="red" class="rounded-xl">
+                <v-card color="primary" class="rounded-xl">
                     <v-img
                         height="200"
                         :src="require('../assets/images/advertising.png')"

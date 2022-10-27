@@ -1,13 +1,27 @@
 [
   {
-    "name": "inspire",
+    "name": "index___ar",
+    "path": "/ar",
+    "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_fcd84e02"
+  },
+  {
+    "name": "inspire___en",
     "path": "/inspire",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/inspire.vue",
     "chunkName": "pages/inspire",
     "_name": "_27a4e472"
   },
   {
-    "name": "index",
+    "name": "inspire___ar",
+    "path": "/ar/inspire",
+    "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_27a4e472"
+  },
+  {
+    "name": "index___en",
     "path": "/",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
     "chunkName": "pages/index",

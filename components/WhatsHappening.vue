@@ -1,13 +1,13 @@
 <template>
     <v-container class="mb-10">
-        <h1>Whats Happening</h1>
+        <h1 dir="auto"> {{ $t('title_event') }} </h1>
 
         <div class="mt-10 text-center">
             <h1>MOA Summer Sale</h1>
             <p class="mt-3">Your summer just got a lot more exciting at MOA!</p>
         </div>
 
-        <v-row no-gutters>
+        <v-row>
             <v-col cols="12" md="6" offset-md="3">
                 <v-carousel
                     v-model="carousel"

@@ -65,7 +65,28 @@
 
                     <!-- <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a> -->
                     <v-spacer></v-spacer>
-                    <v-btn class="text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
+
+                    
+
+                    <span class="mr-3 link-item py-1">
+                       <nuxt-link
+                            class="text-lowercase v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'en'"
+                            :to="switchLocalePath('en')"
+                            >
+                            <v-icon small color="accent" class="mr-1">mdi-web</v-icon> en
+                        </nuxt-link>
+
+                        <nuxt-link
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'ar'"
+                            :to="switchLocalePath('ar')"
+                            >
+                            <v-icon small color="accent" class="mr-1">mdi-web</v-icon> عربى
+                        </nuxt-link>
+                    </span>
                 </div>
             </v-container>
         </v-row>
@@ -104,9 +125,7 @@ export default {
     width: 80%;
 }
 
-.main-link {
-    .link-item {
-        font-size: 16px;
-    }
+.link-item {
+    font-size: 1em;
 }
 </style>

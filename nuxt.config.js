@@ -40,6 +40,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: ['en', 'ar'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en: {
+              title_event: 'Whats Happening'
+            },
+            ar: {
+              title_event: 'ماذا يحدث'
+            }
+          }
+        }
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -59,7 +77,7 @@ export default {
         },
         light: {
           primary: '#00b2e5',
-          accent: colors.grey.darken3,
+          accent: '#4a4a4c',
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
