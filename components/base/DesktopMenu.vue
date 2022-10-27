@@ -28,10 +28,38 @@
             <v-container class="t-0">
                 <div class="main-links d-flex align-start justify-start">
                     <span v-for="(item, index) in mainLinks" :key="index" 
-                        class="mr-3 text-capitalize link-item px-3 py-1">
+                        class="mr-3 text-capitalize link-item py-1">
+
+                        <div v-if="item.children.length">
+                            <v-menu offset-y content-class="elevation-0">
+                                <template v-slot:activator="{ on, attrs }">
+                                    <v-btn
+                                        class="text-capitalize"
+                                        v-bind="attrs"
+                                        v-on="on"
+                                        text
+                                    >
+                                        {{ item.name }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </template>
+                                <v-list min-width="150">
+                                    <v-list-item
+                                        v-for="(child, idx) in item.children" :key="idx"
+                                    >
+                                    <v-list-item-title>{{ child.name }}</v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
+                        </div>
                         
-                        <a v-if="item.children.length" class="d-block text--primary">{{ item.name }}</a>
-                        <a v-else class="d-block text--primary">{{ item.name }}</a>
+
+                        <v-btn
+                            v-else 
+                            class="text-capitalize"
+                            text
+                        >
+                            {{ item.name }}
+                        </v-btn>
                                     
                     </span>
 
@@ -47,6 +75,7 @@
 <script>
 export default {
     name: 'DesktopMenu',
+    props: ['on', ],
     props: {
         links: {
             type: Object,

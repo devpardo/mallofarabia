@@ -3,14 +3,12 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_27a4e472"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_fcd84e02"
+    "chunkName": "pages/index"
   }
 ]

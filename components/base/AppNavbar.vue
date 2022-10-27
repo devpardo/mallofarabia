@@ -42,8 +42,18 @@ export default {
                 { name: 'Mall Map', icon: 'mdi-map'},
             ],
             mainLinks: [
-                { name: 'Shop', children: [] },
-                { name: 'Dine', children: [] },
+                { name: 'Shop', children: [
+                    { name: 'Shop 1' },
+                    { name: 'Shop 2' },
+                    { name: 'Shop 3' },
+                    { name: 'Shop 4' }
+                ] },
+                { name: 'Dine', children: [
+                    { name: 'Dine 1' },
+                    { name: 'Dine 2' },
+                    { name: 'Dine 3' },
+                    { name: 'Dine 4' }
+                ] },
                 { name: 'Entertain', children: [] },
                 { name: 'Cinema', children: [] },
                 { name: 'Train', children: [] },
@@ -67,7 +77,7 @@ export default {
 <style lang="scss">
 .main-links {
     font-size: 1.2em;
-    
+
     .link-item {
         
     }
@@ -76,10 +86,6 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-
-.top-nav {
-    min-height: 113px;
-}
 
 @media (min-width: 320px) {
     .desktop-menu {
@@ -106,6 +112,10 @@ export default {
    .mobile-menu {
         display: block;
     }
+
+    .top-nav {
+        min-height: 80px;
+    }
 }
 
 @media (min-width: 960px) {
@@ -119,6 +129,10 @@ export default {
 
     .tab-menu {
         display: block;
+    }
+
+    .top-nav {
+        min-height: 113px;
     }
 
     .container {

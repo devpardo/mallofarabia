@@ -17,13 +17,54 @@
             </v-col>
         </v-row>
 
-        <v-row no-gutters class="mt-10">
-            <v-col>
+        <v-row>
+            <v-container class="t-0">
                 <div class="main-links d-flex align-start justify-start">
-                    <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a>
-                    <v-btn class="ml-auto text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
+                    <span v-for="(item, index) in mainLinks" :key="index" 
+                        class="mr-3 text-capitalize link-item py-1">
+
+                        <div v-if="item.children.length">
+                            <v-menu offset-y content-class="elevation-0">
+                                <template v-slot:activator="{ on, attrs }">
+                                    <v-btn
+                                        class="text-capitalize"
+                                        v-bind="attrs"
+                                        v-on="on"
+                                        text
+                                    >
+                                        {{ item.name }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
+                                    </v-btn>
+                                </template>
+                                <v-list min-width="150">
+                                    <v-list-item
+                                        v-for="(child, idx) in item.children" :key="idx"
+                                    >
+                                    <v-list-item-title>{{ child.name }}</v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </v-menu>
+                        </div>
+                        
+
+                        <v-btn
+                            v-else 
+                            class="text-capitalize"
+                            text
+                        >
+                            {{ item.name }}
+                        </v-btn>
+                                    
+                    </span>
+
+                    <!-- <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a> -->
+                    <v-spacer></v-spacer>
+
+                    <span class="mr-3 text-capitalize link-item py-1">
+                        <v-btn class="text-capitalize" text><v-icon>mdi-globe</v-icon> EN</v-btn>
+                    </span>
+
                 </div>
-            </v-col>
+            </v-container>
         </v-row>
    </div>
 </template>

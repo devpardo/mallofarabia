@@ -8,28 +8,23 @@
                             <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
                         </div>
                     </div>
-
-                    <div>
-                        <v-icon>mdi-mail</v-icon>
-                    </div>
+                    <v-spacer></v-spacer>
+                    <v-btn class="pa-0 mr-2 elevation-0" small color="primary" text tile>
+                        <v-icon>mdi-globe</v-icon> EN
+                    </v-btn>
+                    <v-btn v-if="!menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" text tile>
+                        <v-icon >mdi-menu</v-icon>
+                    </v-btn>
+                    <v-btn v-if="menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" text tile>
+                        <v-icon >mdi-close</v-icon>
+                    </v-btn>
                 </div>
             </v-col>
         </v-row>
 
-        <v-row>
-            <v-container class="t-0">
-                <div class="main-links d-flex align-start justify-start">
-                    <span v-for="(item, index) in mainLinks" :key="index" 
-                        class="mr-3 text-capitalize link-item px-3 py-1">
-                        
-                        <a class="text--primary">{{ item.name }}</a>
-                                    
-                    </span>
-                    
-                    <v-btn class="ml-auto text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
-                </div>
-            </v-container>
-        </v-row>
+        <div class="mobile-menu white slide-y-transition" v-if="menuShown">
+            adsfadsfadsf
+        </div>
    </div>
 </template>
 
@@ -45,6 +40,21 @@ export default {
             type: Array,
             default: () => []
         },
+    },
+    data() {
+        return {
+            menuShown: false
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.menuShown = false;
+        })
+    },
+    beforeUpdate() {
+        window.removeEventListener('resize', () => {
+            console.log('removed');
+        })
     }
 }
 </script>
@@ -68,5 +78,19 @@ export default {
     .link-item {
         font-size: 16px;
     }
+}
+
+.mobile-menu {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: 100%;
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>
