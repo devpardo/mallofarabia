@@ -1,4 +1,7 @@
 {
+  "BannerCards": {
+    "description": "Auto imported from components/BannerCards.vue"
+  },
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },
