@@ -2,35 +2,40 @@
    <div>
         <v-row no-gutters>
             <v-col cols="12">
-                <div class="d-flex align-center justify-center mb-2">
+                <div class="d-flex align-center justify-start">
                     <div class="logo pa-2">
-                        <div class="d-flex align-center justify-center">
+                        <div class="d-flex align-center justify-center ">
                             <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
                         </div>
                     </div>
-                </div>
-                <div class="d-flex align-center justify-center" style="flex-wrap: wrap">
-                    <a class="toplink-item text-center d-flex align-center justify-center pa-3 text--primary" v-for="(item, index) in links" :key="index">
-                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
-                    </a>
+
+                    <div>
+                        <v-icon>mdi-mail</v-icon>
+                    </div>
                 </div>
             </v-col>
         </v-row>
 
-        <v-row no-gutters class="mt-10">
-            <v-col>
+        <v-row>
+            <v-container class="t-0">
                 <div class="main-links d-flex align-start justify-start">
-                    <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a>
+                    <span v-for="(item, index) in mainLinks" :key="index" 
+                        class="mr-3 text-capitalize link-item px-3 py-1">
+                        
+                        <a class="text--primary">{{ item.name }}</a>
+                                    
+                    </span>
+                    
                     <v-btn class="ml-auto text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
                 </div>
-            </v-col>
+            </v-container>
         </v-row>
    </div>
 </template>
 
 <script>
 export default {
-    name: 'TabMenu',
+    name: 'MobileMenu',
     props: {
         links: {
             type: Array,
@@ -39,7 +44,7 @@ export default {
         mainLinks: {
             type: Array,
             default: () => []
-        }
+        },
     }
 }
 </script>
@@ -50,7 +55,8 @@ export default {
 }
 
 .toplink-item {
-    font-size: 1em;
+    padding: 20px 0;
+    font-size: 14px;
 }
 
 .icon {
@@ -58,13 +64,9 @@ export default {
     color: $charcoal-grey;
 }
 
-.main-links {
+.main-link {
     .link-item {
-        font-size: 1em;
+        font-size: 16px;
     }
-}
-
-.debug {
-    border: 1px solid red;
 }
 </style>

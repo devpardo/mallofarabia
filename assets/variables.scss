@@ -5,12 +5,14 @@
 $body-font-family: 'Graphik', sans-serif !default;
 $font-family: 'Graphik', sans-serif !default;
 $charcoal-grey: #4a4a4c;
+$base-font-size: 12px;
 
 
 body, html 
 .v-application {
 
     font-family: $body-font-family !important;
+    font-size: $base-font-size;
 
 
     h1, .text-h1,

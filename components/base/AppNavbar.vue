@@ -1,18 +1,15 @@
 <template>
     <v-sheet class="top-nav">
-        <v-container class="desktop-menu">
-            <DesktopMenu :links="{linksLeft, linksRight}" />
+        <v-container class="desktop-menu" v-if="vb.mdAndUp">
+            <DesktopMenu :links="{linksLeft, linksRight}" :main-links="mainLinks"/>
         </v-container>
 
-        <v-container class="tab-menu"> 
-            <TabMenu :links="allLinks" />
+        <v-container class="tab-menu" v-if="vb.mdAndDown"> 
+            <TabMenu :links="allLinks" :main-links="mainLinks"/>
         </v-container>
 
-        <v-container class="t-0">
-            <div class="main-links d-flex align-start justify-start">
-                <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a>
-                <v-btn class="ml-auto text-capitalize link-item" text><v-icon>mdi-globe</v-icon> EN</v-btn>
-            </div>
+        <v-container class="mobile-menu" v-if="vb.smAndDown"> 
+            <MobileMenu :links="allLinks" :main-links="mainLinks"/>
         </v-container>
     </v-sheet>
 </template>
@@ -20,12 +17,14 @@
 <script>
 import DesktopMenu from '@/components/base/DesktopMenu'
 import TabMenu from '@/components/base/TabMenu'
+import MobileMenu from '@/components/base/MobileMenu'
 
 export default {
     name: 'AppNavbar',
     components: {
         DesktopMenu,
-        TabMenu
+        TabMenu,
+        MobileMenu
     },
     data() {
         return {
@@ -65,6 +64,17 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.main-links {
+    font-size: 1.2em;
+    
+    .link-item {
+        
+    }
+}
+
+</style>
+
 <style lang="scss" scoped>
 
 .top-nav {
@@ -79,6 +89,8 @@ export default {
     .tab-menu {
         display: none;
     }
+
+    
 }
 
 @media (min-width: 480px) {
@@ -91,10 +103,16 @@ export default {
 }
 
 @media (min-width: 768px) {
-   
+   .mobile-menu {
+        display: block;
+    }
 }
 
 @media (min-width: 960px) {
+    .mobile-menu {
+        display: none;
+    }
+
      .desktop-menu {
         display: none
     }
@@ -113,6 +131,8 @@ export default {
     .container {
         max-width: 1185px;
     }
+
+    
     
 }
 
