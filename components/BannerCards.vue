@@ -7,7 +7,7 @@
                         height="200"
                         :src="require('../assets/images/advertising.png')"
                         class="white--text d-flex align-center justify-center"
-                        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                        gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                     >
                         <div class="text-left mx-auto" style="width: 300px">
                             <h2>Advertising</h2>
@@ -23,7 +23,7 @@
                         height="200"
                         :src="require('../assets/images/leasing.png')"
                         class="white--text d-flex align-center justify-center"
-                        gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                        gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                     >
                         <div class="text-left mx-auto" style="width: 300px">
                             <h2>Leasing</h2>

@@ -1,9 +1,9 @@
 <template>
     <v-container class="mb-10">
-        <h2>Whats Happening</h2>
+        <h1>Whats Happening</h1>
 
         <div class="mt-10 text-center">
-            <h2>MOA Summer Sale</h2>
+            <h1>MOA Summer Sale</h1>
             <p class="mt-3">Your summer just got a lot more exciting at MOA!</p>
         </div>
 
@@ -12,7 +12,7 @@
                 <v-carousel
                     v-model="carousel"
                     ref="carousel"
-                    @change="test"
+                    @change="changeSlide"
                     cycle
                     show-arrows-on-hover
                     hide-delimiter-background
@@ -35,7 +35,7 @@
                         depressed
                         class="rounded-xl mr-3 d-inline-block" 
                         :class="i == carousel ? 'primary' : 'grey'"
-                        style="width: 50px; height: 5px; cursor: poiner" @click="changeSlide(i)">
+                        style="width: 50px; height: 5px; cursor: poiner" @click="goToSlide(i)">
                     </v-btn>
                 </div>
             </v-col>
@@ -67,10 +67,10 @@ export default {
         }
     },
     methods: {
-        changeSlide(i) {
+        goToSlide(i) {
             this.carousel = i
         },
-        test(e) {
+        changeSlide(e) {
             console.log(e);
         }
     }

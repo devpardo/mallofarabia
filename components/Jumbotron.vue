@@ -13,7 +13,10 @@ export default {
 <style scoped>
 .jumbotron {
     height: 600px;
-    background-color: red;
+    background-color: #00b2e5;
     margin-bottom: 3em;
+    background-image: url('../assets/images/homebanner.png');
+    background-repeat: no-repeat;
+    background-position: right;
 }
 </style>
