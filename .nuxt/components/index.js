@@ -1,9 +1,9 @@
-export { default as Jumbotron } from '../../components/Jumbotron.vue'
-export { default as WhatsHappening } from '../../components/WhatsHappening.vue'
-export { default as BaseAppNavbar } from '../../components/base/AppNavbar.vue'
-export { default as BaseDesktopMenu } from '../../components/base/DesktopMenu.vue'
-export { default as BaseMobileMenu } from '../../components/base/MobileMenu.vue'
-export { default as BaseTabMenu } from '../../components/base/TabMenu.vue'
+export const Jumbotron = () => import('../../components/Jumbotron.vue' /* webpackChunkName: "components/jumbotron" */).then(c => wrapFunctional(c.default || c))
+export const WhatsHappening = () => import('../../components/WhatsHappening.vue' /* webpackChunkName: "components/whats-happening" */).then(c => wrapFunctional(c.default || c))
+export const BaseAppNavbar = () => import('../../components/base/AppNavbar.vue' /* webpackChunkName: "components/base-app-navbar" */).then(c => wrapFunctional(c.default || c))
+export const BaseDesktopMenu = () => import('../../components/base/DesktopMenu.vue' /* webpackChunkName: "components/base-desktop-menu" */).then(c => wrapFunctional(c.default || c))
+export const BaseMobileMenu = () => import('../../components/base/MobileMenu.vue' /* webpackChunkName: "components/base-mobile-menu" */).then(c => wrapFunctional(c.default || c))
+export const BaseTabMenu = () => import('../../components/base/TabMenu.vue' /* webpackChunkName: "components/base-tab-menu" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
