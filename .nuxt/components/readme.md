@@ -13,5 +13,6 @@ You can directly use them in pages and other components without the need to impo
 - `<WhatsHappening>` | `<whats-happening>` (components/WhatsHappening.vue)
 - `<BaseAppNavbar>` | `<base-app-navbar>` (components/base/AppNavbar.vue)
 - `<BaseDesktopMenu>` | `<base-desktop-menu>` (components/base/DesktopMenu.vue)
+- `<BaseFooter>` | `<base-footer>` (components/base/Footer.vue)
 - `<BaseMobileMenu>` | `<base-mobile-menu>` (components/base/MobileMenu.vue)
 - `<BaseTabMenu>` | `<base-tab-menu>` (components/base/TabMenu.vue)

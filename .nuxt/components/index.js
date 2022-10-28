@@ -5,6 +5,7 @@ export { default as Jumbotron } from '../../components/Jumbotron.vue'
 export { default as WhatsHappening } from '../../components/WhatsHappening.vue'
 export { default as BaseAppNavbar } from '../../components/base/AppNavbar.vue'
 export { default as BaseDesktopMenu } from '../../components/base/DesktopMenu.vue'
+export { default as BaseFooter } from '../../components/base/Footer.vue'
 export { default as BaseMobileMenu } from '../../components/base/MobileMenu.vue'
 export { default as BaseTabMenu } from '../../components/base/TabMenu.vue'
 

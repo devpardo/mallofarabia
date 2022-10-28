@@ -96,7 +96,6 @@
 <script>
 export default {
     name: 'DesktopMenu',
-    props: ['on', ],
     props: {
         links: {
             type: Object,

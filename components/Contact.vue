@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact mb-10">
     <v-container>
         <div class="contact-container pa-0 overflow-auto">
             <v-img
@@ -9,7 +9,7 @@
                 gradient="to bottom, rgba(0, 35, 75,.3), rgba(0, 35, 75, 1)"
             >
 
-            <v-row class="px-10 py-5">
+            <v-row class="pa-10">
                 <v-col cols="12" md="6">
                     <div class="d-flex align-center justify-start fill-height pa-5">
                         <div>

@@ -20,6 +20,9 @@
   "BaseDesktopMenu": {
     "description": "Auto imported from components/base/DesktopMenu.vue"
   },
+  "BaseFooter": {
+    "description": "Auto imported from components/base/Footer.vue"
+  },
   "BaseMobileMenu": {
     "description": "Auto imported from components/base/MobileMenu.vue"
   },
