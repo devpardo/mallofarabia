@@ -1,28 +1,23 @@
 <template>
-    <div class="amenities mb-10">
-       <v-carousel class="amenities-carousel" 
-            v-model="model" height="100%"
-            hide-delimiter-background
-            hide-delimiters
-            :show-arrows="false"
-            >
-            <v-carousel-item
-                v-for="(item, i) in items"
-                :key="i"
-                height="100%"
-                reverse-transition="fade-transition"
-                transition="fade-transition"
+    <div class="mb-10">
+        <v-container>
+           <div class="slide-container">
+            <v-carousel class="amenities-carousel" 
+                v-model="model" height="100%"
+                hide-delimiter-background
+                hide-delimiters
+                :show-arrows="false"
                 >
-                <v-sheet
-                    width="100%"
+                <v-carousel-item
+                    v-for="(item, i) in items"
+                    :key="i"
                     height="100%"
-                    tile
-                >
-                    <div class="fill-height ma-0 pa-5">
-                        <v-container class="slide-container grey lighten-3 fill-height elevation-8">
+                    >
+                    <div class="ma-0">
+                        <v-container class="elevation-8">
                             <v-row no-gutters class="align-center">
                                 <v-col cols="12" sm="12" md="5" class="d-block d-md-none">
-                                    <v-card height="250" width="200" class="rounded-xl mx-auto" elevation="6">
+                                    <v-card height="450" width="350" class="rounded-xl mx-auto" elevation="6">
                                         <v-img height="100%" :src="items[model].img" cover/>
                                     </v-card>
                                 </v-col>
@@ -75,9 +70,10 @@
                             </v-row>
                         </v-container>
                     </div>
-                </v-sheet>
-            </v-carousel-item>
-        </v-carousel>
+                </v-carousel-item>
+            </v-carousel>
+           </div>
+        </v-container>
     </div>
 </template>
 
@@ -154,26 +150,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.amenities {
-    height: 600px;
 
-    .amenities-carousel {
-        width: 100%
-    }
-
-    .slide-container {
-        padding: 5%;
-        border-radius: 50px;
-        background-image: url('../assets/images/ameneties.png'), linear-gradient(0deg, rgb(255, 221, 0) 0%, rgb(255, 255, 255) 35%, rgba(0,212,255,0) 100%);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
+.slide-container {
+    padding: 5%;
+    border-radius: 50px;
+    background-image: url('../assets/images/ameneties.png'), linear-gradient(0deg, rgb(255, 221, 0) 0%, rgb(255, 255, 255) 35%, rgba(0,212,255,0) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
 }
 
-.v-carousel .v-window-item {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+
 </style>
