@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Amenities>` | `<amenities>` (components/Amenities.vue)
 - `<BannerCards>` | `<banner-cards>` (components/BannerCards.vue)
+- `<Contact>` | `<contact>` (components/Contact.vue)
 - `<Jumbotron>` | `<jumbotron>` (components/Jumbotron.vue)
 - `<WhatsHappening>` | `<whats-happening>` (components/WhatsHappening.vue)
 - `<BaseAppNavbar>` | `<base-app-navbar>` (components/base/AppNavbar.vue)

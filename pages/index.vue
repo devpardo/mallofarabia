@@ -4,6 +4,7 @@
           <WhatsHappening />
           <BannerCards />
           <Amenities />
+          <Contact />
       </div>
 </template>
 
@@ -12,13 +13,16 @@ import Jumbotron from '@/components/Jumbotron'
 import WhatsHappening from '@/components/WhatsHappening'
 import BannerCards from '@/components/BannerCards'
 import Amenities from '@/components/Amenities'
+import Contact from '@/components/Contact'
+
 export default {
   name: 'IndexPage',
   components: {
     Jumbotron,
     WhatsHappening,
     BannerCards,
-    Amenities
+    Amenities,
+    Contact
   }
 }
 </script>

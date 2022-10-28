@@ -5,6 +5,9 @@
   "BannerCards": {
     "description": "Auto imported from components/BannerCards.vue"
   },
+  "Contact": {
+    "description": "Auto imported from components/Contact.vue"
+  },
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },

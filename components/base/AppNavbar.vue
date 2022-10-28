@@ -88,6 +88,9 @@ export default {
 <style lang="scss" scoped>
 
 @media (min-width: 320px) {
+    .container {
+        width: 95%;
+    }
     .desktop-menu {
         display: none
     }
