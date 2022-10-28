@@ -1,4 +1,7 @@
 {
+  "Amenities": {
+    "description": "Auto imported from components/Amenities.vue"
+  },
   "BannerCards": {
     "description": "Auto imported from components/BannerCards.vue"
   },

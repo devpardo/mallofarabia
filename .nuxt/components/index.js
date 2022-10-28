@@ -1,3 +1,4 @@
+export { default as Amenities } from '../../components/Amenities.vue'
 export { default as BannerCards } from '../../components/BannerCards.vue'
 export { default as Jumbotron } from '../../components/Jumbotron.vue'
 export { default as WhatsHappening } from '../../components/WhatsHappening.vue'

@@ -12,7 +12,6 @@
                 <v-carousel
                     v-model="carousel"
                     ref="carousel"
-                    @change="changeSlide"
                     cycle
                     show-arrows-on-hover
                     hide-delimiter-background
@@ -69,9 +68,6 @@ export default {
     methods: {
         goToSlide(i) {
             this.carousel = i
-        },
-        changeSlide(e) {
-            console.log(e);
         }
     }
 }
