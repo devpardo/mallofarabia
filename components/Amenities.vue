@@ -21,7 +21,13 @@
                     <div class="fill-height ma-0 pa-5">
                         <v-container class="slide-container grey lighten-3 fill-height elevation-8">
                             <v-row no-gutters class="align-center">
-                                <v-col sm="12" md="5">
+                                <v-col cols="12" sm="12" md="5" class="d-block d-md-none">
+                                    <v-card height="250" width="200" class="rounded-xl mx-auto" elevation="6">
+                                        <v-img height="100%" :src="items[model].img" cover/>
+                                    </v-card>
+                                </v-col>
+                                
+                                <v-col cols="12" sm="12" md="5">
                                     
                                     <div class="d-flex flex-column">
                                         <div class="mb-5 mt-10">
@@ -49,7 +55,7 @@
 
                                 </v-col>
 
-                                <v-col sm="12" md="7">
+                                <v-col sm="12" md="7" class="d-none d-md-block">
 
                                     <div class="full-height d-flex overflow-hidden align-center justify-center">
                                         <v-card height="450" width="350" class="rounded-xl" style="z-index: 3" elevation="6">
