@@ -3,7 +3,7 @@
         <v-container>
            <div class="slide-container">
             <v-carousel class="amenities-carousel" 
-                v-model="model" height="100%"
+                v-model="model" :height="vb.smAndDown ? '800' : '450'" min-height="500"
                 hide-delimiter-background
                 hide-delimiters
                 :show-arrows="false"
@@ -11,13 +11,18 @@
                 <v-carousel-item
                     v-for="(item, i) in items"
                     :key="i"
-                    height="100%"
+                    transition="fade-transition"
+                    reverse-transition="fade-transition"
                     >
                     <div class="ma-0">
-                        <v-container class="elevation-8">
+                        <v-container>
                             <v-row no-gutters class="align-center">
-                                <v-col cols="12" sm="12" md="5" class="d-block d-md-none">
-                                    <v-card height="450" width="350" class="rounded-xl mx-auto" elevation="6">
+                                <v-col cols="12" sm="12" md="5" class="d-block d-md-none" style="position: relative">
+                                    <v-card height="100" width="300" class="rounded-xl mx-auto next-img" elevation="6">
+                                        <v-img height="100%" :src="items[nextModel].img" cover/>
+                                    </v-card>
+
+                                    <v-card color="red" height="450" width="350" class="rounded-xl mx-auto mt-10" elevation="6">
                                         <v-img height="100%" :src="items[model].img" cover/>
                                     </v-card>
                                 </v-col>
@@ -37,7 +42,7 @@
                                         </div>
 
 
-                                        <div class="d-flex align-start justify-start">
+                                        <div class="d-flex align-start" :class="vb.mdAndDown ? 'justify-center' : 'justify-start'">
                                             <v-btn elevation="6" :disabled="model == 0" height="50" width="50" small color="primary rounded-lg pa-2" class="mr-3" @click="prev(model)">
                                                 <v-icon x-large>mdi-chevron-left</v-icon>
                                             </v-btn>
@@ -115,7 +120,9 @@ export default {
         
     },
     computed: {
-        
+        vb() {
+            return this.$vuetify.breakpoint
+        }
     },
     methods: {
         next(param) {
@@ -158,8 +165,47 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: auto;
+    position: relative;
+
+    .amenities-carousel {
+
+        // .v-window__container {
+        //     min-height: 500px !important;
+        //     background-color: red;
+        //     display: block;
+        // }
+
+        // .v-window-item {
+        //     background-color: red;
+        //     min-height: 500px;
+        //     position: absolute;
+        //     top: 0;
+        //     width: 100%;
+        // }
+    }
 }
+
+
+.v-carousel .v-window-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.next-img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+}
+
+// .v-carousel .v-window-item {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+// }
+
 
 
 </style>
