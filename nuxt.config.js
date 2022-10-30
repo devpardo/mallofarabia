@@ -70,7 +70,7 @@ export default {
         dark: {
           primary: '#00b2e5',
           accent: '#00234b',
-          secondary: colors.amber.darken3,
+          secondary: '#00b2e5',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
@@ -79,7 +79,7 @@ export default {
         light: {
           primary: '#00b2e5',
           accent: '#00234b',
-          secondary: colors.amber.darken3,
+          secondary: '#00b2e5',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

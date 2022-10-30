@@ -1,6 +1,8 @@
 export { default as Amenities } from '../../components/Amenities.vue'
 export { default as BannerCards } from '../../components/BannerCards.vue'
 export { default as Contact } from '../../components/Contact.vue'
+export { default as FeatureCard } from '../../components/FeatureCard.vue'
+export { default as Features } from '../../components/Features.vue'
 export { default as Jumbotron } from '../../components/Jumbotron.vue'
 export { default as WhatsHappening } from '../../components/WhatsHappening.vue'
 export { default as BaseAppNavbar } from '../../components/base/AppNavbar.vue'

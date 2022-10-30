@@ -11,6 +11,6 @@ export default {
 <style lang="scss">
 .tiktok {
     fill : currentColor;
-    height: 30px;
+    height: 30px !important;
 }
 </style>

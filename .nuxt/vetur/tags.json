@@ -8,6 +8,12 @@
   "Contact": {
     "description": "Auto imported from components/Contact.vue"
   },
+  "FeatureCard": {
+    "description": "Auto imported from components/FeatureCard.vue"
+  },
+  "Features": {
+    "description": "Auto imported from components/Features.vue"
+  },
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },
