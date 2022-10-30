@@ -16,3 +16,4 @@ You can directly use them in pages and other components without the need to impo
 - `<BaseFooter>` | `<base-footer>` (components/base/Footer.vue)
 - `<BaseMobileMenu>` | `<base-mobile-menu>` (components/base/MobileMenu.vue)
 - `<BaseTabMenu>` | `<base-tab-menu>` (components/base/TabMenu.vue)
+- `<IconsTiktok>` | `<icons-tiktok>` (components/icons/Tiktok.vue)

@@ -13,7 +13,7 @@
 
                         <div class="d-flex mt-8">
                             <v-btn
-                                v-for="(icon, i) in 5" :key="i"
+                                v-for="(item, i) in sm_links" :key="i"
                                 depressed
                                 text
                                 fab
@@ -22,44 +22,22 @@
                                 color="grey"
                                 class="mr-1"
                             >
-                                <v-icon dark large>
-                                    mdi-facebook
+                                <v-icon v-if="i == 'tiktok'" dark large>
+                                    $vuetify.icons.values.tiktok
+                                </v-icon>
+
+                                <v-icon v-else dark large>
+                                    {{ item.icon }}
                                 </v-icon>
                             </v-btn>
                         </div>
                     </div>
                 </v-col>
-                <v-col cols="12" md="2">
-                    <h3>Shop</h3>
-                    <v-list-item v-for="(item, index) in 6" :key="index" class="pa-0">
-                        <v-list-item-content>
-                            <v-list-item-title class="caption">Single-line item</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-col>
-                <v-col cols="12" md="2">
-                    <h3>Fashion</h3>
-                    <v-list-item v-for="(item, index) in 6" :key="index" class="pa-0">
-                        <v-list-item-content>
-                            <v-list-item-title class="caption">Single-line item</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-col>
-                <v-col cols="12" md="2">
-                    <h3>Dine</h3>
-                    <v-list-item v-for="(item, index) in 6" :key="index" class="pa-0">
-                        <v-list-item-content>
-                            <v-list-item-title class="caption">Single-line item</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-col>
-                <v-col cols="12" md="2">
-                    <h3>Other</h3>
-                    <v-list-item v-for="(item, index) in 6" :key="index" class="pa-0">
-                        <v-list-item-content>
-                            <v-list-item-title class="caption">Single-line item</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
+                <v-col cols="12" md="2" v-for="(field, key) in footer_links" :key="key">
+                    <h3 class="text-capitalize mb-3">{{ key }}</h3>
+                    <div v-for="(item, index) in footer_links[key]" :key="index" class="pa-0 flex-column">
+                        <a href="#" class="footer-link d-block mb-2 py-2">{{ item.title }}</a>
+                    </div>
                 </v-col>
                 
             </v-row>
@@ -110,10 +88,71 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    data() {
+        return {
+            sm_links: {
+                facebook: {
+                    icon: 'mdi-facebook',
+                    to: ''
+                },
+                instagram: {
+                    icon: 'mdi-instagram',
+                    to: ''
+                },
+                twitter: {
+                    icon: 'mdi-twitter',
+                    to: ''
+                },
+                linkedin: {
+                    icon: 'mdi-linkedin',
+                    to: ''
+                },
+                tiktok: {
+                    icon: '',
+                    to: ''
+                }
+            },
+            footer_links : {
+                shop: [
+                    { title: 'Book / Stationery / Toys / Games / Gifts', to: '/'},
+                    { title: 'Electronics / Home Appliances / Computers / Mobiles', to: '/'}
+                ],
+                fashion: [
+                    { title: 'Children & Maternity', to: '/'},
+                    { title: 'Jewelery', to: '/'},
+                    { title: 'Lingerie & Swimwear', to: '/'},
+                    { title: 'Men', to: '/'},{ title: 'Optics', to: '/'},
+                    { title: 'Sportswear & Goods', to: '/'},
+                    { title: 'Unisex', to: '/'},
+                    { title: 'Watches', to: '/'},
+                    { title: 'Women', to: '/'}
+                ],
+                dine: [
+                    { title: 'Fast Food', to: '/'},
+                    { title: 'Cafes', to: '/'},
+                    { title: 'Resturants', to: '/'},
+                    { title: 'Specialty', to: '/'},
+                ],
+                other: [
+                    { title: 'Specialty', to: '/'},
+                    { title: 'Entertain', to: '/'},
+                    { title: 'Cinema', to: '/'},
+                    { title: 'Services', to: '/'},
+                    { title: 'Events', to: '/'},
+                    { title: 'Leasing', to: '/'},
+                    { title: 'Advertising', to: '/'}
+                ]
+            }
+        }
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.footer-link {
+    text-decoration: none;
+    color: $charcoal-grey !important;
+    font-size: .9em;
+}
 </style>

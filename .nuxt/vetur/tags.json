@@ -28,5 +28,8 @@
   },
   "BaseTabMenu": {
     "description": "Auto imported from components/base/TabMenu.vue"
+  },
+  "IconsTiktok": {
+    "description": "Auto imported from components/icons/Tiktok.vue"
   }
 }

@@ -112,6 +112,10 @@ export default {
     
 }
 
+.custom-input.v-text-field--outlined.v-input--dense .v-label{
+    color: #fff !important;
+}
+
 .custom-input.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state) > .v-input__control > .v-input__slot fieldset {
     border-color: #fff !important;
 }
@@ -123,11 +127,12 @@ export default {
 
 .custom-input.v-input input,
 .custom-input.v-input textarea{
-    color: #fff;
+    color: #fff !important;
     font-size: .9em;
 }
+
 .custom-input .v-label {
-    color: #fff;
+    color: #fff !important;
     opacity: 1;
     font-size: .9em;
 }

@@ -8,6 +8,7 @@ export { default as BaseDesktopMenu } from '../../components/base/DesktopMenu.vu
 export { default as BaseFooter } from '../../components/base/Footer.vue'
 export { default as BaseMobileMenu } from '../../components/base/MobileMenu.vue'
 export { default as BaseTabMenu } from '../../components/base/TabMenu.vue'
+export { default as IconsTiktok } from '../../components/icons/Tiktok.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
