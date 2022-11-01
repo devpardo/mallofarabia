@@ -45,7 +45,7 @@
                         <v-list-group class="mb-2 rounded-lg pill-menu" v-if="item.children.length">
                             <template v-slot:activator>
                                 <v-list-item-content>
-                                    <v-list-item-title>{{ $t(`links.${item.lang}`) }}</v-list-item-title>
+                                    <v-list-item-title dir="auto">{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                                 </v-list-item-content>
                             </template>
 
@@ -55,14 +55,14 @@
                                 @click="menuActionClick(item)"
                             >
                                 <v-list-item-content>
-                                    <v-list-item-title v-text="child.name"></v-list-item-title>
+                                    <v-list-item-title v-text="child.name" dir="auto"></v-list-item-title>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-group>
 
                         <v-list-item @click="menuActionClick(item)" class="mb-2 rounded-lg pill-menu" v-else>
                             <v-list-item-content>
-                                <v-list-item-title>{{ $t(`links.${item.lang}`) }}</v-list-item-title>
+                                <v-list-item-title dir="auto">{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                     </div>
