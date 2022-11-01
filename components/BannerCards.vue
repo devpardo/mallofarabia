@@ -11,9 +11,9 @@
                                 class="white--text d-flex align-center justify-center"
                                 gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                             >
-                                <div class="text-left mx-auto" style="width: 300px">
-                                    <h2>Advertising</h2>
-                                    <p>Mall of Tanta offers your business unlimited media options to advertise and promote your brand</p>
+                                <div class="mx-auto" style="width: 300px">
+                                    <h2 dir="auto">{{ $t('advertising') }}</h2>
+                                    <p dir="auto">{{ $t('advertisingText') }}</p>
                                 </div> 
 
                                 <v-fade-transition>
@@ -40,9 +40,9 @@
                                 class="white--text d-flex align-center justify-center"
                                 gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                             >
-                                <div class="text-left mx-auto" style="width: 300px">
-                                    <h2>Leasing</h2>
-                                    <p>Connect to submit your leasing interest in our shopping malls.</p>
+                                <div class="mx-auto" style="width: 300px">
+                                    <h2 dir="auto">{{ $t('leasing') }}</h2>
+                                    <p dir="auto">{{ $t('leasingText') }}</p>
                                 </div> 
 
                                 <v-fade-transition>
