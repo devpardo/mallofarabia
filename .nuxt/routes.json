@@ -3,12 +3,14 @@
     "name": "index___ar",
     "path": "/ar",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_fcd84e02"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "/Users/bryanpardo/Projects/work/fndev/moa-app/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_fcd84e02"
   }
 ]

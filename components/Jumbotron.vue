@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="jumbotron">
-        
+        <v-icon class="ml-2 white--text">$vuetify.icons.values.arrow_down</v-icon>
     </v-container>
 </template>
 

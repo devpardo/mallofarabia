@@ -11,27 +11,27 @@
                     <v-spacer></v-spacer>
                     <div>
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mr-2"
                             tag="button"
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
+                            en
                         </nuxt-link>
 
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mr-2"
                             tag="button"
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
+                            عربى
                         </nuxt-link>
                     </div>
-                    <v-btn v-if="!menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" text tile>
+                    <v-btn v-if="!menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" large text icon tile>
                         <v-icon >mdi-menu</v-icon>
                     </v-btn>
-                    <v-btn v-if="menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" text tile>
+                    <v-btn v-if="menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" large icon text tile>
                         <v-icon >mdi-close</v-icon>
                     </v-btn>
                 </div>
@@ -154,7 +154,6 @@ export default {
 
     .v-list-item.v-list-item--active::before {
         display: none !important;
-        background: red;
     }
 
     .v-list-item--active:focus::before {

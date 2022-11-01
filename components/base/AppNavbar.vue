@@ -29,17 +29,17 @@ export default {
     data() {
         return {
             linksLeft: [
-                { name: 'Opening Hours', lang: 'opening_hours', icon: 'mdi-clock-time-three'},
-                { name: 'Careers', lang: 'careers', icon: 'mdi-briefcase'},
-                { name: '16269', lang: 'phone', icon: 'mdi-phone'},
-                { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: 'mdi-map-marker'},
+                { name: 'Opening Hours', lang: 'opening_hours', icon: '$vuetify.icons.values.hours_icon'}, 
+                { name: 'Careers', lang: 'careers', icon: '$vuetify.icons.values.careers_icon'},
+                { name: '16269', lang: 'phone', icon: '$vuetify.icons.values.telephone_icon'},
+                { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: '$vuetify.icons.values.location_icon'},
             ],
             linksRight: [
-                { name: 'Contact Us', lang: 'contact', icon: 'mdi-send'},
-                { name: 'About Us', lang: 'about', icon: 'mdi-help'},
-                { name: 'Advertising', lang: 'advertising', icon: 'mdi-bullhorn'},
-                { name: 'Leasing', lang: 'leasing', icon: 'mdi-key-variant'},
-                { name: 'Mall Map', lang: 'mall_map', icon: 'mdi-map'},
+                { name: 'Contact Us', lang: 'contact', icon: '$vuetify.icons.values.contact_icon'},
+                { name: 'About Us', lang: 'about', icon: '$vuetify.icons.values.about_icon'},
+                { name: 'Advertising', lang: 'advertising', icon: '$vuetify.icons.values.advertising'},
+                { name: 'Leasing', lang: 'leasing', icon: '$vuetify.icons.values.leasing'},
+                { name: 'Mall Map', lang: 'mall_map', icon: '$vuetify.icons.values.mall_map'},
             ],
             mainLinks: [
                 { name: 'Shop', lang: 'shop', children: [

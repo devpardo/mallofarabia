@@ -4,7 +4,7 @@
             <v-col cols="5">
                 <div class="d-flex">
                     <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in links.linksLeft" :key="index">
-                        <v-icon class="icon mx-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
+                        <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                     </div>
                 </div>
             </v-col>
@@ -70,21 +70,21 @@
 
                     <span class="mr-3 link-item py-1">
                        <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-3 v-btn--outlined mt-3"
                             tag="button"
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
+                            en
                         </nuxt-link>
 
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-3 v-btn--outlined mt-3"
                             tag="button"
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
+                            عربى
                         </nuxt-link>
                     </span>
                 </div>
@@ -116,8 +116,9 @@ export default {
 }
 
 .icon {
-    font-size: 15px;
+    height: 10px !important;
     color: $charcoal-grey;
+    font-size: 20px !important;
 }
 
 .logo {

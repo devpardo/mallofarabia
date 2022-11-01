@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -27,6 +27,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -67,37 +68,15 @@ export default {
         //     }
         //   }
         // }
-      }
-    ]
+      },
+    ],
+    '@nuxtjs/axios'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     optionsPath: './vuetify.options.js',
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: '#00b2e5',
-          accent: '#00234b',
-          secondary: '#00b2e5',
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        },
-        light: {
-          primary: '#00b2e5',
-          accent: '#00234b',
-          secondary: '#00b2e5',
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

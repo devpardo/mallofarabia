@@ -61,21 +61,21 @@
 
                     <span class="mr-3 link-item py-1">
                        <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-1"
                             tag="button"
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
+                            en
                         </nuxt-link>
 
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-1"
                             tag="button"
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
+                            عربى
                         </nuxt-link>
                     </span>
 
@@ -119,9 +119,5 @@ export default {
     .link-item {
         font-size: 1em;
     }
-}
-
-.debug {
-    border: 1px solid red;
 }
 </style>

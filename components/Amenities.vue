@@ -22,7 +22,7 @@
                                         <v-img height="100%" :src="items[nextModel].img" cover/>
                                     </v-card>
 
-                                    <v-card color="red" height="450" width="350" class="rounded-xl mx-auto mt-10" elevation="6">
+                                    <v-card height="450" width="350" class="rounded-xl mx-auto mt-10" elevation="6">
                                         <v-img height="100%" :src="items[model].img" cover/>
                                     </v-card>
                                 </v-col>

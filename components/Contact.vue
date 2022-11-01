@@ -63,8 +63,8 @@
                         ></v-textarea>
 
                         <div class="d-flex" :class="$i18n.locale == 'en' ? ['align-end justify-end'] : ['align-start justify-start']">
-                            <v-btn class="text-capitalize" width="30%" color="primary" large>
-                                {{ $t('send') }} 
+                            <v-btn class="text-capitalize white--text" width="30%" color="primary" large>
+                                {{ $t('send') }} <v-icon class="ml-2">$vuetify.icons.values.moa_arrow_white</v-icon>
                             </v-btn>
                         </div>
                     </div>
