@@ -70,7 +70,7 @@
 
                     <span class="mr-3 link-item py-1">
                        <nuxt-link
-                            class="text-lowercase v-btn v-btn--text theme--light v-size--default small"
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
                             tag="button"
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
@@ -79,7 +79,7 @@
                         </nuxt-link>
 
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default small"
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
                             tag="button"
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"

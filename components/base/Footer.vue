@@ -4,7 +4,7 @@
         <v-container>
             <v-row>
                 <v-col cols="12" md="4">
-                    <div class="d-flex flex-column align-start justify-start ">
+                    <div class="d-flex flex-column align-start justify-start " dir="auto">
                         <v-img class="mb-5" max-width="150" block contain :src="require('../../assets/images/logo-en.png')"/>
 
                         <p class="caption">6th of October City, Juhaynah Square, Cairo</p>
@@ -34,8 +34,8 @@
                     </div>
                 </v-col>
                 <v-col cols="12" md="2" v-for="(field, key) in footer_links" :key="key">
-                    <h3 class="text-capitalize mb-3">{{ key }}</h3>
-                    <div v-for="(item, index) in footer_links[key]" :key="index" class="pa-0 flex-column">
+                    <h3 class="text-capitalize mb-3" dir="auto">{{ $t(key) }}</h3>
+                    <div dir="auto" v-for="(item, index) in footer_links[key]" :key="index" class="pa-0 flex-column">
                         <a href="#" class="footer-link d-block mb-2 py-2">{{ item.title }}</a>
                     </div>
                 </v-col>
@@ -58,7 +58,7 @@
                                         text
                                         small
                                     >
-                                        View All Group Entries <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
+                                        {{ $t('entity_group') }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
                                     </v-btn>
                                 </template>
                                 <v-list min-width="150">
@@ -72,9 +72,10 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col cols="12" sm="12" md="6" lg="3" class="caption text-center text-sm-center text-md-left">
-                    <p>© Copyright Marakez 2020. All Rights Reserved.</p>
-                    <a href="#">Privacy Policy</a>
+                <v-col dir="auto" cols="12" sm="12" md="6" lg="3" class="caption text-center text-sm-center"
+                :class="$i18n.locale == 'en' ? ['text-md-left'] : ['text-md-right']">
+                    <p>{{ $t('copyright') }}</p>
+                    <a href="#"> {{ $t('privacy') }}</a>
                 </v-col>
             </v-row>
         </v-container>

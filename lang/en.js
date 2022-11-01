@@ -16,5 +16,12 @@ export default {
     email: 'Email Address',
     mobile_number: 'Mobile Number',
     full_name: 'Full Name',
-    send: 'Send'
+    send: 'Send',
+    shop: 'Shop',
+    fashion: 'Fashion',
+    dine: 'Dine',
+    other: 'Others',
+    copyright: '© Copyright Marakez 2020. All Rights Reserved.',
+    privacy: 'Privacy Policy',
+    entity_group: 'View All Group Entities',
 }

@@ -16,5 +16,12 @@ export default {
     email: 'البريد الالكتروني',
     mobile_number: 'رقم الهاتف',
     full_name: 'الاسم بالكامل',
-    send: 'ارسل'
+    send: 'ارسل',
+    shop: 'تسوق',
+    fashion: 'الموضة',
+    dine: 'المطاعم',
+    other: 'العروض',
+    copyright: 'جميع الحقوق محفوظة لمراكز',
+    privacy: 'سياسة الخصوصية',
+    entity_group: 'عرض كيانات المجموعة',
 }
