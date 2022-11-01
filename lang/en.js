@@ -9,4 +9,12 @@ export default {
     advertising: 'Advertising',
     leasing: 'Leasing',
     mall_map: 'Mall Map',
+    contact_tagline: 'We’re Here To Help, at Mall of Arabia we’re always ready to listen, feel free to get in touch anytime',
+    contact_us: 'Contact Us',
+    message: 'Message',
+    subject: 'Subject',
+    email: 'Email Address',
+    mobile_number: 'Mobile Number',
+    full_name: 'Full Name',
+    send: 'Send'
 }

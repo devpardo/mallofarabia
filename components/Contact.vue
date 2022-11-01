@@ -10,11 +10,11 @@
             >
 
             <v-row class="pa-10">
-                <v-col cols="12" md="6">
+                <v-col cols="12" md="6" :order="$i18n.locale == 'en' ? 'first': 'last'">
                     <div class="d-flex align-center justify-start fill-height pa-5">
-                        <div>
-                            <h1 class="text-uppercase">Contact Us</h1>
-                            <p>We’re Here To Help, at Mall of Arabia we’re always ready to listen, feel free to get in touch anytime</p>
+                        <div class="d-flex flex-column" style="width: 100%">
+                            <h1 dir="auto" class="text-uppercase">{{ $t('contact_us') }}</h1>
+                            <p dir="auto">{{ $t('contact_tagline')}}</p>
                         </div>
                     </div>
                 </v-col>
@@ -24,7 +24,7 @@
                             v-model="form.name"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
-                            label="Full Name"
+                            :label="$t('full_name')"
                             outlined dense hide-details="true"
                         ></v-text-field>  
 
@@ -32,7 +32,7 @@
                             v-model="form.mobile"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
-                            label="Mobile Number"
+                            :label="$t('mobile_number')"
                             outlined dense hide-details="true"
                         ></v-text-field>
 
@@ -40,8 +40,8 @@
                             v-model="form.email"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
-                            label="Email"
                             type="email"
+                            :label="$t('email')"
                             outlined dense hide-details="true"
                         ></v-text-field>
 
@@ -49,7 +49,7 @@
                             v-model="form.subject"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
-                            label="Subject"
+                            :label="$t('subject')"
                             outlined dense hide-details="true"
                         ></v-text-field>
 
@@ -58,13 +58,13 @@
                             outlined dense hide-details="true"
                             class="custom-input rounded-lg mb-5 white--text"
                             name="input-7-4"
-                            label="Message"
+                            :label="$t('message')"
                             value=""
                         ></v-textarea>
 
-                        <div class="d-flex align-end justify-end">
+                        <div class="d-flex" :class="$i18n.locale == 'en' ? ['align-end justify-end'] : ['align-start justify-start']">
                             <v-btn class="text-capitalize" width="30%" color="primary" large>
-                                Send 
+                                {{ $t('send') }} 
                             </v-btn>
                         </div>
                     </div>

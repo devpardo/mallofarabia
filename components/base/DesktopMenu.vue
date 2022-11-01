@@ -70,16 +70,16 @@
 
                     <span class="mr-3 link-item py-1">
                        <nuxt-link
-                            class="text-lowercase v-btn v-btn--text theme--light v-size--default"
+                            class="text-lowercase v-btn v-btn--text theme--light v-size--default small"
                             tag="button"
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
                             >
-                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> en
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
                         </nuxt-link>
 
                         <nuxt-link
-                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default small"
                             tag="button"
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"

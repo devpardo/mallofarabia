@@ -9,4 +9,12 @@ export default {
     advertising: 'الاعلانات',
     leasing: 'الايجارات',
     mall_map: 'خريطة المول',
+    contact_tagline: 'نحن هنا لمساعدتك في مول العرب ..',
+    contact_us: 'تواصل معنا',
+    message: 'التفاصيل',
+    subject: 'العنوان',
+    email: 'البريد الالكتروني',
+    mobile_number: 'رقم الهاتف',
+    full_name: 'الاسم بالكامل',
+    send: 'ارسل'
 }
