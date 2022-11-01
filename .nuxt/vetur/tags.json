@@ -20,6 +20,21 @@
   "WhatsHappening": {
     "description": "Auto imported from components/WhatsHappening.vue"
   },
+  "BaseAppNavbar": {
+    "description": "Auto imported from components/base/AppNavbar.vue"
+  },
+  "BaseDesktopMenu": {
+    "description": "Auto imported from components/base/DesktopMenu.vue"
+  },
+  "BaseFooter": {
+    "description": "Auto imported from components/base/Footer.vue"
+  },
+  "BaseMobileMenu": {
+    "description": "Auto imported from components/base/MobileMenu.vue"
+  },
+  "BaseTabMenu": {
+    "description": "Auto imported from components/base/TabMenu.vue"
+  },
   "IconsAboutIcon": {
     "description": "Auto imported from components/icons/AboutIcon.vue"
   },
@@ -58,20 +73,5 @@
   },
   "IconsTiktok": {
     "description": "Auto imported from components/icons/Tiktok.vue"
-  },
-  "BaseAppNavbar": {
-    "description": "Auto imported from components/base/AppNavbar.vue"
-  },
-  "BaseDesktopMenu": {
-    "description": "Auto imported from components/base/DesktopMenu.vue"
-  },
-  "BaseFooter": {
-    "description": "Auto imported from components/base/Footer.vue"
-  },
-  "BaseMobileMenu": {
-    "description": "Auto imported from components/base/MobileMenu.vue"
-  },
-  "BaseTabMenu": {
-    "description": "Auto imported from components/base/TabMenu.vue"
   }
 }

@@ -58,15 +58,15 @@
                                 <v-col sm="12" md="7" class="d-none d-md-block">
 
                                     <div class="full-height d-flex overflow-hidden align-center justify-center">
-                                        <v-card height="450" width="350" class="rounded-xl" style="z-index: 3" elevation="6">
+                                        <v-card class="animate__animated animate__bounceInRight rounded-xl" height="450" width="350" style="z-index: 3" elevation="6">
                                             <v-img height="100%" :src="items[model].img" cover/>
                                         </v-card>
 
-                                        <v-card height="400" width="300" class="rounded-xl" style="z-index: 2; margin-left: -200px">
+                                        <v-card class="animate__animated animate__bounceInLeft rounded-xl" height="400" width="300" style="z-index: 2; margin-left: -200px">
                                             <v-img height="100%" :src="items[nextModel].img" cover/>
                                         </v-card>
 
-                                        <v-card height="350" width="250" class="rounded-xl" style="z-index: 1; margin-left: -150px">
+                                        <v-card class="animate__animated animate__bounceInLeft  rounded-xl" height="350" width="250" style="z-index: 1; margin-left: -150px">
                                             <v-img height="100%" :src="items[prevModel].img" cover/>
                                         </v-card>
                                     </div>

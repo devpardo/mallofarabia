@@ -2,8 +2,8 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
-$body-font-family: 'Graphik', sans-serif !default;
-$font-family: 'Graphik', sans-serif !default;
+$body-font-family: 'Cairo', sans-serif !default;
+$font-family: 'Cairo', sans-serif !default;
 $charcoal-grey: #4a4a4c;
 $base-font-size: 14px;
 $primary: #00b3e6;
@@ -17,6 +17,7 @@ body, html
 
     font-family: $body-font-family !important;
     font-size: $base-font-size;
+    font-weight: normal;
 
 
     h1, .text-h1,
@@ -44,6 +45,7 @@ body, html
     .overline
     {
         font-family: $body-font-family !important;
+        font-weight: lighter;
     }
 }
 
