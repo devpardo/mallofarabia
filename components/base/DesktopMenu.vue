@@ -1,10 +1,10 @@
 <template>
     <div>
-        <v-row no-gutters>
+        <v-row no-gutters dir="auto">
             <v-col cols="5">
                 <div class="d-flex">
                     <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in links.linksLeft" :key="index">
-                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
+                        <v-icon class="icon mx-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
                     </div>
                 </div>
             </v-col>
@@ -18,7 +18,7 @@
             <v-col cols="5">
                 <div class="d-flex">
                     <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in links.linksRight" :key="index">
-                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
+                        <v-icon class="icon mx-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
                     </div>
                 </div>
             </v-col>
@@ -75,7 +75,7 @@
                             v-if="$i18n.locale !== 'en'"
                             :to="switchLocalePath('en')"
                             >
-                            <v-icon small color="accent" class="mr-1">mdi-web</v-icon> en
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> en
                         </nuxt-link>
 
                         <nuxt-link
@@ -84,7 +84,7 @@
                             v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"
                             >
-                            <v-icon small color="accent" class="mr-1">mdi-web</v-icon> عربى
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
                         </nuxt-link>
                     </span>
                 </div>

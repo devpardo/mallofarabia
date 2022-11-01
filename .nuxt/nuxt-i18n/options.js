@@ -10,17 +10,17 @@ export const nuxtOptions = {
   trailingSlash: undefined,
 }
 export const options = {
-  vueI18n: {"fallbackLocale":"en","messages":{"en":{"title_event":"Whats Happening"},"ar":{"title_event":"ماذا يحدث"}}},
+  vueI18n: {},
   vueI18nLoader: false,
-  locales: ["en","ar"],
+  locales: [{"code":"en","file":"en.js"},{"code":"ar","file":"ar.js"}],
   defaultLocale: "en",
   defaultDirection: "ltr",
   routesNameSeparator: "___",
   defaultLocaleRouteNameSuffix: "default",
   sortRoutes: true,
   strategy: "prefix_except_default",
-  lazy: false,
-  langDir: null,
+  lazy: true,
+  langDir: "/Users/bryanpardo/Projects/work/fndev/moa-app/lang",
   rootRedirect: null,
   detectBrowserLanguage: {"alwaysRedirect":false,"cookieAge":365,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","redirectOn":"root","useCookie":true},
   differentDomains: false,
@@ -31,9 +31,12 @@ export const options = {
   skipSettingLocaleOnNavigate: false,
   onBeforeLanguageSwitch: () => {},
   onLanguageSwitched: () => null,
-  normalizedLocales: [{"code":"en"},{"code":"ar"}],
+  normalizedLocales: [{"code":"en","file":"en.js"},{"code":"ar","file":"ar.js"}],
   localeCodes: ["en","ar"],
   additionalMessages: [],
 }
 
-export const localeMessages = {}
+export const localeMessages = {
+  'en.js': () => import('../../lang/en.js' /* webpackChunkName: "lang-en.js" */),
+  'ar.js': () => import('../../lang/ar.js' /* webpackChunkName: "lang-ar.js" */),
+}

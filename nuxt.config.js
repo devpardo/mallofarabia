@@ -43,19 +43,30 @@ export default {
     [
       '@nuxtjs/i18n',
       {
-        locales: ['en', 'ar'],
-        defaultLocale: 'en',
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              title_event: 'Whats Happening'
-            },
-            ar: {
-              title_event: 'ماذا يحدث'
-            }
+        locales: [
+          {
+            code: 'en',
+            file: 'en.js'
+          },
+          {
+            code: 'ar',
+            file: 'ar.js'
           }
-        }
+        ],
+        defaultLocale: 'en',
+        langDir: 'lang/',
+        lazy: true,
+        // vueI18n: {
+        //   fallbackLocale: 'en',
+        //   messages: {
+        //     en: {
+        //       title_event: 'Whats Happening'
+        //     },
+        //     ar: {
+        //       title_event: 'ماذا يحدث'
+        //     }
+        //   }
+        // }
       }
     ]
   ],

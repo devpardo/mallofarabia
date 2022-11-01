@@ -29,17 +29,17 @@ export default {
     data() {
         return {
             linksLeft: [
-                { name: 'Opening Hours', icon: 'mdi-clock-time-three'},
-                { name: 'Careers', icon: 'mdi-briefcase'},
-                { name: '16269', icon: 'mdi-phone'},
-                { name: 'Al Giza Desert, Giza Governorate', icon: 'mdi-map-marker'},
+                { name: 'Opening Hours', lang: 'opening_hours', icon: 'mdi-clock-time-three'},
+                { name: 'Careers', lang: 'careers', icon: 'mdi-briefcase'},
+                { name: '16269', lang: 'phone', icon: 'mdi-phone'},
+                { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: 'mdi-map-marker'},
             ],
             linksRight: [
-                { name: 'Contact Us', icon: 'mdi-send'},
-                { name: 'About Us', icon: 'mdi-help'},
-                { name: 'Advertising', icon: 'mdi-bullhorn'},
-                { name: 'Leasing', icon: 'mdi-key-variant'},
-                { name: 'Mall Map', icon: 'mdi-map'},
+                { name: 'Contact Us', lang: 'contact', icon: 'mdi-send'},
+                { name: 'About Us', lang: 'about', icon: 'mdi-help'},
+                { name: 'Advertising', lang: 'advertising', icon: 'mdi-bullhorn'},
+                { name: 'Leasing', lang: 'leasing', icon: 'mdi-key-variant'},
+                { name: 'Mall Map', lang: 'mall_map', icon: 'mdi-map'},
             ],
             mainLinks: [
                 { name: 'Shop', children: [
