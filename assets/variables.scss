@@ -48,12 +48,17 @@ body, html
 
 .v-ripple__container {
     opacity: 0 !important;
- }
+}
 
- .v-list-group__header.v-list-item--active:not(:hover):not(:focus):before {
-    display: none;
- }
+.v-list-group__header.v-list-item--active:not(:hover):not(:focus):before {
+display: none;
+}
 
- .theme--light.v-list-item--active:hover::before, .theme--light.v-list-item--active::before {
-    display: none;
- }
+.theme--light.v-list-item--active:hover::before, .theme--light.v-list-item--active::before {
+display: none;
+}
+
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+}

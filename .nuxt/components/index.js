@@ -5,12 +5,12 @@ export { default as FeatureCard } from '../../components/FeatureCard.vue'
 export { default as Features } from '../../components/Features.vue'
 export { default as Jumbotron } from '../../components/Jumbotron.vue'
 export { default as WhatsHappening } from '../../components/WhatsHappening.vue'
+export { default as IconsTiktok } from '../../components/icons/Tiktok.vue'
 export { default as BaseAppNavbar } from '../../components/base/AppNavbar.vue'
 export { default as BaseDesktopMenu } from '../../components/base/DesktopMenu.vue'
 export { default as BaseFooter } from '../../components/base/Footer.vue'
 export { default as BaseMobileMenu } from '../../components/base/MobileMenu.vue'
 export { default as BaseTabMenu } from '../../components/base/TabMenu.vue'
-export { default as IconsTiktok } from '../../components/icons/Tiktok.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

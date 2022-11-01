@@ -24,4 +24,18 @@ export default {
     copyright: '© Copyright Marakez 2020. All Rights Reserved.',
     privacy: 'Privacy Policy',
     entity_group: 'View All Group Entities',
+    entertain: 'Entertain',
+    cinema: 'Cinema',
+    events: 'Events',
+    train: 'Train',
+    links: {
+        shop: 'Shop',
+        dine: 'Dine',
+        entertain: 'Entertain',
+        cinema: 'Cinema',
+        train: 'Train',
+        events: 'Events',
+        services: 'Services',
+        offers: 'Offers',
+    }
 }

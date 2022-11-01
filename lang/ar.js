@@ -2,7 +2,7 @@ export default {
     title_event: 'ما الجديد؟',
     opening_hours: 'مواعيد العمل',
     careers: 'وظائف',
-    phone: '16269',
+    phone: 'رقم 16269',
     address: 'الشيخ زايد،القاهرة',
     contact: 'اتصل بنا',
     about: 'نبذة عنا',
@@ -24,4 +24,14 @@ export default {
     copyright: 'جميع الحقوق محفوظة لمراكز',
     privacy: 'سياسة الخصوصية',
     entity_group: 'عرض كيانات المجموعة',
+    links: {
+        shop: 'تسوق',
+        dine: 'المطاعم',
+        entertain: 'الترفيه',
+        cinema: 'السنيما',
+        train: 'تدريب',
+        events: 'الفعاليات',
+        services: 'الخدمات',
+        offers: 'العروض',
+    }
 }

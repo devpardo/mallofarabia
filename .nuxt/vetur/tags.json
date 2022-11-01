@@ -20,6 +20,9 @@
   "WhatsHappening": {
     "description": "Auto imported from components/WhatsHappening.vue"
   },
+  "IconsTiktok": {
+    "description": "Auto imported from components/icons/Tiktok.vue"
+  },
   "BaseAppNavbar": {
     "description": "Auto imported from components/base/AppNavbar.vue"
   },
@@ -34,8 +37,5 @@
   },
   "BaseTabMenu": {
     "description": "Auto imported from components/base/TabMenu.vue"
-  },
-  "IconsTiktok": {
-    "description": "Auto imported from components/icons/Tiktok.vue"
   }
 }

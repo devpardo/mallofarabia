@@ -26,7 +26,7 @@
 
         <v-row>
             <v-container class="t-0">
-                <div class="main-links d-flex align-start justify-start">
+                <div class="main-links d-flex align-start justify-start" dir="auto">
                     <span v-for="(item, index) in mainLinks" :key="index" 
                         class="mr-3 text-capitalize link-item py-1">
 
@@ -39,7 +39,7 @@
                                         v-on="on"
                                         text
                                     >
-                                        {{ item.name }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
+                                        {{ $t(`links.${item.lang}`) }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
                                     </v-btn>
                                 </template>
                                 <v-list min-width="150">
@@ -58,7 +58,7 @@
                             class="text-capitalize"
                             text
                         >
-                            {{ item.name }}
+                            {{ $t(`links.${item.lang}`) }}
                         </v-btn>
                                     
                     </span>

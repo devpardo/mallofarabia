@@ -42,24 +42,24 @@ export default {
                 { name: 'Mall Map', lang: 'mall_map', icon: 'mdi-map'},
             ],
             mainLinks: [
-                { name: 'Shop', children: [
+                { name: 'Shop', lang: 'shop', children: [
                     { name: 'Shop 1' },
                     { name: 'Shop 2' },
                     { name: 'Shop 3' },
                     { name: 'Shop 4' }
                 ] },
-                { name: 'Dine', children: [
+                { name: 'Dine', lang: 'dine', children: [
                     { name: 'Dine 1' },
                     { name: 'Dine 2' },
                     { name: 'Dine 3' },
                     { name: 'Dine 4' }
                 ] },
-                { name: 'Entertain', children: [] },
-                { name: 'Cinema', children: [] },
-                { name: 'Train', children: [] },
-                { name: 'Events', children: [] },
-                { name: 'Services', children: [] },
-                { name: 'Offers', children: [] }
+                { name: 'Entertain', lang: 'entertain', children: [] },
+                { name: 'Cinema', lang: 'cinema', children: [] },
+                { name: 'Train', lang: 'train', children: [] },
+                { name: 'Events', lang: 'events', children: [] },
+                { name: 'Services', lang: 'services', children: [] },
+                { name: 'Offers', lang: 'offers', children: [] }
             ]
         }
     },

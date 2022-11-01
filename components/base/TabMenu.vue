@@ -11,7 +11,7 @@
                 </div>
                 <div class="d-flex align-center justify-center" style="flex-wrap: wrap">
                     <a class="toplink-item text-center d-flex align-center justify-center pa-3 text--primary" v-for="(item, index) in links" :key="index">
-                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ item.name }} 
+                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
                     </a>
                 </div>
             </v-col>
@@ -32,7 +32,7 @@
                                         v-on="on"
                                         text
                                     >
-                                        {{ item.name }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
+                                        {{ $t(`links.${item.lang}`) }} <v-icon class="ml-3 text--primary" x-small>mdi-chevron-down</v-icon>
                                     </v-btn>
                                 </template>
                                 <v-list min-width="150">
@@ -51,7 +51,7 @@
                             class="text-capitalize"
                             text
                         >
-                            {{ item.name }}
+                            {{ $t(`links.${item.lang}`) }}
                         </v-btn>
                                     
                     </span>
@@ -59,8 +59,24 @@
                     <!-- <a v-for="(item, index) in mainLinks" :key="index" class="mr-3 text-capitalize link-item px-3 py-1 text--primary" text>{{ item.name }}</a> -->
                     <v-spacer></v-spacer>
 
-                    <span class="mr-3 text-capitalize link-item py-1">
-                        <v-btn class="text-capitalize" text><v-icon>mdi-globe</v-icon> EN</v-btn>
+                    <span class="mr-3 link-item py-1">
+                       <nuxt-link
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'en'"
+                            :to="switchLocalePath('en')"
+                            >
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
+                        </nuxt-link>
+
+                        <nuxt-link
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'ar'"
+                            :to="switchLocalePath('ar')"
+                            >
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
+                        </nuxt-link>
                     </span>
 
                 </div>

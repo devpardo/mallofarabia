@@ -9,9 +9,25 @@
                         </div>
                     </div>
                     <v-spacer></v-spacer>
-                    <v-btn class="pa-0 mr-2 elevation-0" small color="primary" text tile>
-                        <v-icon>mdi-globe</v-icon> EN
-                    </v-btn>
+                    <div>
+                        <nuxt-link
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'en'"
+                            :to="switchLocalePath('en')"
+                            >
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> English
+                        </nuxt-link>
+
+                        <nuxt-link
+                            class="text-capitalize v-btn v-btn--text theme--light v-size--default"
+                            tag="button"
+                            v-if="$i18n.locale !== 'ar'"
+                            :to="switchLocalePath('ar')"
+                            >
+                            <v-icon small color="accent" class="mx-1">mdi-web</v-icon> عربى
+                        </nuxt-link>
+                    </div>
                     <v-btn v-if="!menuShown" @click="menuShown = !menuShown" class="pa-0 elevation-0" color="primary" text tile>
                         <v-icon >mdi-menu</v-icon>
                     </v-btn>
@@ -22,14 +38,14 @@
             </v-col>
         </v-row>
 
-        <div class="mobile-menu white" v-if="menuShown">
+        <div class="mobile-menu white overflow-auto" v-if="menuShown">
             <div class="pa-5">
                 <v-list class="mb-10">
                     <div v-for="(item, index) in mainLinks" :key="index">
                         <v-list-group class="mb-2 rounded-lg pill-menu" v-if="item.children.length">
                             <template v-slot:activator>
                                 <v-list-item-content>
-                                    <v-list-item-title v-text="item.name"></v-list-item-title>
+                                    <v-list-item-title>{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                                 </v-list-item-content>
                             </template>
 
@@ -46,7 +62,7 @@
 
                         <v-list-item @click="menuActionClick(item)" class="mb-2 rounded-lg pill-menu" v-else>
                             <v-list-item-content>
-                                <v-list-item-title v-text="item.name"></v-list-item-title>
+                                <v-list-item-title>{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                     </div>
@@ -57,8 +73,8 @@
                 <v-list class="mt-10 mb-10">
                     <v-list-item class="item-link mb-2" v-for="(item, index) in links" :key="index">
                         <v-list-item-content>
-                            <v-list-item-title class="item-link-title">
-                                <v-icon class="mr-1 icon">{{ item.icon }}</v-icon> {{ item.name }}
+                            <v-list-item-title class="item-link-title" dir="auto">
+                                <v-icon class="mr-1 icon">{{ item.icon }}</v-icon> {{ $t(item.lang) }}
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
@@ -104,6 +120,16 @@ export default {
         menuActionClick(param) {
             console.log(param)
         }
+    },
+    watch: {
+        menuShown(newVal) {
+            console.log(newVal);
+            if(newVal) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
+        }
     }
 }
 </script>
@@ -118,7 +144,8 @@ export default {
     position: absolute;
     left: 0;
     top: 70px;
-    height: 100%;
+    height: 100vh;
+    z-index: 2;
     animation: fadeIn .5s;
 
     .pill-menu {
