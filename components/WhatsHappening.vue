@@ -1,5 +1,5 @@
 <template>
-    <v-container class="mb-10">
+    <v-container class="mb-10" ref="whatshappening">
         <h1 dir="auto"> {{ $t('title_event') }} </h1>
 
         <div class="mt-10 text-center">

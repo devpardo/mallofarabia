@@ -1,7 +1,7 @@
 <template>
       <div>
-          <Jumbotron />
-          <WhatsHappening />
+          <Jumbotron @scroll="test"/>
+          <WhatsHappening ref="events" />
           <BannerCards />
           <Features />
           <Amenities />
@@ -26,6 +26,14 @@ export default {
     Amenities,
     Contact,
     Features
+  },
+  methods: {
+    test() {
+
+      this.$refs.events.$el.scrollIntoView({ behavior: "smooth" });
+      
+      console.log();
+    }
   }
 }
 </script>
