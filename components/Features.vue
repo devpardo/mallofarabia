@@ -13,10 +13,7 @@
             </v-col>
             <v-col cols="12" md="9">
                 <v-row no-gutters>
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
+                    <FeatureCard v-for="(item, key) in items['shop']" :key="key" :title="item.title" :img="item.image" />
                 </v-row>
             </v-col>
         </v-row>
@@ -24,10 +21,7 @@
         <v-row class="mb-10 mt-10">
             <v-col cols="12" md="9">
                 <v-row no-gutters>
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
+                    <FeatureCard v-for="(item, key) in items['dine']" :key="key" :title="item.title" :img="item.image" />
                 </v-row>
             </v-col>
             <v-col cols="12" md="3" class="d-flex align-start justify-start" :order="vb.smAndDown ? 'first': 'last'">
@@ -53,10 +47,7 @@
             </v-col>
             <v-col cols="12" md="9">
                 <v-row no-gutters>
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
-                    <FeatureCard :title="'Test'" :img="null" />
+                    <FeatureCard v-for="(item, key) in items['entertainment']" :key="key" :title="item.title" :img="item.image" />
                 </v-row>
             </v-col>
         </v-row>
@@ -72,10 +63,35 @@ export default {
     components: {
         FeatureCard
     },
+    data() {
+        return {
+            items: {
+                shop: [
+                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
+                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
+                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
+                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' }
+                ],
+                dine: [
+                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
+                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
+                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
+                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' }
+                ],
+                entertainment: [
+                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
+                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
+                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
+                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' }
+                ]
+            }
+        }
+    },
     computed: {
         vb() {
             return this.$vuetify.breakpoint
-        }
+        },
+        
     },
 }
 </script>

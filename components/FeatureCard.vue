@@ -1,7 +1,8 @@
 <template>
     <v-col cols="6" sm="3" md="4" lg="3" class="d-flex justify-center align-center mb-5">
         <v-hover :disabled="vb.smAndDown" v-slot="{ hover }">
-            <v-card :class="{ 'on-hover': hover && !vb.smAndDown }" class="feature-card d-flex justify-center align-center rounded-xl" height="200" width="200">
+            <v-card :class="{ 'on-hover': hover && !vb.smAndDown }" class="feature-card d-flex justify-center align-center rounded-xl overflow-hidden" height="200" width="200">
+                <span class="test" v-if="!hover"></span>
                 <v-img
                     :src="img"
                     class="white--text align-end"
@@ -37,16 +38,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.feature-card {
+.test {
     background-image: url('../assets/images/feature-card.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-color: $secondary !important;
     transition: opacity .4s ease-in-out;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
 }
 
-.feature-card:not(.on-hover) {
-  opacity: 0.6;
- }
+.test:not(.on-hover) {
+  opacity: 0.3;
+}
+
+.test {
+
+}
 </style>
