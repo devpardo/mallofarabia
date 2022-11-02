@@ -13,9 +13,13 @@
                 </div>
             </v-col>
             <v-col cols="12" md="9">
-                <v-row no-gutters>
+                <v-slide-group v-if="vb.smAndDown" :show-arrows="vb.smAndDown">
                     <FeatureCard v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
-                </v-row>
+                </v-slide-group>
+
+                <div class="d-flex flex-wrap" v-else>
+                     <FeatureCard class="mb-2" v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
+                </div>
             </v-col>
         </v-row>
 
