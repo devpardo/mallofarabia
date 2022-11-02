@@ -27,6 +27,9 @@ export default {
     Contact,
     Features
   },
+  mounted() {
+    
+  },
   methods: {
     test() {
 

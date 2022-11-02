@@ -1,7 +1,7 @@
 export default function ({ $axios }, inject) {
     // Create a custom axios instance
     const api = $axios.create({
-        baseURL: 'https://my_api.com',
+        baseURL: 'https://gia1m6f55m.execute-api.eu-west-1.amazonaws.com/api',
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"

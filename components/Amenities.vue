@@ -30,8 +30,8 @@
                                 <v-col cols="12" sm="12" md="5">
                                     
                                     <div class="d-flex flex-column">
-                                        <div class="mb-5 mt-10">
-                                            <h1 class="accent--text">{{ item.title }}</h1>
+                                        <div dir="auto" class="mb-5 mt-10">
+                                            <h1 class="accent--text">{{ $t(item.title_translate) }}</h1>
                                         </div>
 
 
@@ -93,16 +93,19 @@ export default {
             items: [
                 { 
                     title: 'Cinema',
+                    title_translate: 'cinema',
                     content: 'Galaxy cinema at MOA offers the biggedst blockbusters using the best and the latest technology and comfort.',
                     img: 'https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg'
                 },
                 { 
                     title: 'Train',
+                    title_translate: 'train',
                     content: 'Galaxy cinema at MOA offers the biggedst blockbusters using the best and the latest technology and comfort.',
                     img: 'https://wallpaperaccess.com/full/1154341.jpg'
                 },
                 { 
                     title: 'Events and Offers',
+                    title_translate: 'events',
                     content: 'Galaxy cinema at MOA offers the biggedst blockbusters using the best and the latest technology and comfort.',
                     img: 'https://images6.alphacoders.com/462/thumb-1920-462371.jpg'
                 }

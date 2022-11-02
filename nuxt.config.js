@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - moa-app',
-    title: 'moa-app',
+    titleTemplate: '%s - Website',
+    title: 'Mall of Arabia',
     htmlAttrs: {
       lang: 'en'
     },

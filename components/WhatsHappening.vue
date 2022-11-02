@@ -65,7 +65,15 @@ export default {
 
         }
     },
+    mounted() {
+        this.getItems();
+    },
     methods: {
+        async getItems() {
+            await this.$api.get('/mall_events').then((res) => {
+                console.log(res);
+            })
+        },
         goToSlide(i) {
             this.carousel = i
         }

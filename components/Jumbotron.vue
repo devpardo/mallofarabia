@@ -58,13 +58,7 @@ export default {
     data() {
         return { 
             model: 0,
-            slides: [
-                { title: 'Mall of Arabia', description: 'The first unconventional mall of its kind, located in 6th of October, Mall of Arabia rolls out on a vast area of 621,401 sqm (147.95 acres) Introducing a distinctive retail world,', image: 'https://marakez.net/Content/Admin/Uploads/Project/7/7b734500-c27a-478a-9f5c-bf8e91c3ffe3.jpg' },
-                { title: 'Mall of Arabia', description: 'The first unconventional mall of its kind, located in 6th of October, Mall of Arabia rolls out on a vast area of 621,401 sqm (147.95 acres) Introducing a distinctive retail world,', image: 'https://marakez.net/Content/Admin/Uploads/Project/7/7b734500-c27a-478a-9f5c-bf8e91c3ffe3.jpg' },
-                { title: 'Mall of Arabia', description: 'The first unconventional mall of its kind, located in 6th of October, Mall of Arabia rolls out on a vast area of 621,401 sqm (147.95 acres) Introducing a distinctive retail world,', image: 'https://marakez.net/Content/Admin/Uploads/Project/7/7b734500-c27a-478a-9f5c-bf8e91c3ffe3.jpg' },
-                { title: 'Mall of Arabia', description: 'The first unconventional mall of its kind, located in 6th of October, Mall of Arabia rolls out on a vast area of 621,401 sqm (147.95 acres) Introducing a distinctive retail world,', image: 'https://marakez.net/Content/Admin/Uploads/Project/7/7b734500-c27a-478a-9f5c-bf8e91c3ffe3.jpg' },
-                { title: 'Mall of Arabia', description: 'The first unconventional mall of its kind, located in 6th of October, Mall of Arabia rolls out on a vast area of 621,401 sqm (147.95 acres) Introducing a distinctive retail world,', image: 'https://marakez.net/Content/Admin/Uploads/Project/7/7b734500-c27a-478a-9f5c-bf8e91c3ffe3.jpg' }
-            ],
+            slides: [],
             colors: [
                 'primary',
                 'secondary',
@@ -74,7 +68,15 @@ export default {
             ],
         }
     },
+    mounted() {
+        this.pull();
+    },
     methods: {
+        async pull() {
+            this.$api.get('/sliders').then(res => {
+                this.slides = res.data.data;
+            });
+        },
         scroll() {
             this.$emit('scroll');
         },
@@ -93,7 +95,7 @@ export default {
     
     .controls-jumbotron {
         position: absolute;
-        bottom: 1em;
+        bottom: 10%;
         width: 100%;
     }
 
