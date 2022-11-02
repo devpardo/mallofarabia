@@ -3,14 +3,15 @@
         <h1 dir="auto"> {{ $t('title_event') }} </h1>
 
         <div class="mt-10 text-center">
-            <h1>MOA Summer Sale</h1>
-            <p class="mt-3">Your summer just got a lot more exciting at MOA!</p>
+            <h1>{{ carouselTitle }}</h1>
+            <p class="mt-3">{{ carouselDesc }}</p>
         </div>
 
         <v-row>
             <v-col cols="12" md="6" offset-md="3">
                 <v-carousel
                     v-model="carousel"
+                    @change="populateData(carousel)"
                     ref="carousel"
                     cycle
                     show-arrows-on-hover
@@ -24,7 +25,7 @@
                         :key="i"
                     >
                         <div class="white" style="height: 100%">
-                            <v-img :src="require('../assets/images/homepage.png')" height="100%"/>
+                            <v-img :src="slide.image" height="100%"/>
                         </div>
                     </v-carousel-item>
                 </v-carousel>
@@ -47,6 +48,8 @@ export default {
     name: 'WhatsHappening',
     data() {
         return {
+            carouselTitle: '',
+            carouselDesc: '',
             carousel: 0,
             colors: [
                 'indigo',
@@ -55,27 +58,29 @@ export default {
                 'red lighten-1',
                 'deep-purple accent-4',
             ],
-            slides: [
-                'First',
-                'Second',
-                'Third',
-                'Fourth',
-                'Fifth',
-            ],
-
+            slides: [],
         }
     },
     mounted() {
-        this.getItems();
+        this.pull();
     },
     methods: {
-        async getItems() {
-            await this.$api.get('/mall_events').then((res) => {
-                console.log(res);
-            })
+        async pull() {
+            this.$api.get('/latest_news').then(res => {
+                this.slides = res.data.data;
+
+                if(res.data.data.length) {
+                    this.populateData(0);
+                }
+            });
         },
         goToSlide(i) {
             this.carousel = i
+            this.populateData(i);
+        },
+        populateData(i) {
+            this.carouselDesc = this.slides[i].description;
+            this.carouselTitle = this.slides[i].title;
         }
     }
 }

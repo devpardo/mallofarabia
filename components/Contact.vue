@@ -19,43 +19,54 @@
                     </div>
                 </v-col>
                 <v-col cols="12" md="6">
-                    <div class="contact-form">
+                    <v-form ref="form" class="contact-form">
+
+                        <v-alert type="success" v-if="success" dismissible @input="closeAlert()">Sent</v-alert>
+
                         <v-text-field
                             v-model="form.name"
                             color="white"
+                            :rules="rules.name"
                             class="custom-input rounded-lg mb-5 white--text"
                             :label="$t('full_name')"
-                            outlined dense hide-details="true"
+                            outlined dense
                         ></v-text-field>  
 
                         <v-text-field
-                            v-model="form.mobile"
+                            type="number"
+                            v-model="form.phone"
+                            :rules="rules.phone"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
                             :label="$t('mobile_number')"
-                            outlined dense hide-details="true"
+                            outlined dense
                         ></v-text-field>
 
                         <v-text-field
                             v-model="form.email"
+                            :rules="rules.email"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
                             type="email"
                             :label="$t('email')"
-                            outlined dense hide-details="true"
+                            outlined dense
                         ></v-text-field>
 
                         <v-text-field
                             v-model="form.subject"
+                            :rules="rules.subject"
                             color="white"
                             class="custom-input rounded-lg mb-5 white--text"
                             :label="$t('subject')"
-                            outlined dense hide-details="true"
-                        ></v-text-field>
+                            outlined dense
+                        >
+                            <template slot="default">fadsfadsfasd</template>
+                        </v-text-field>
 
                         <v-textarea
                             v-model="form.message"
-                            outlined dense hide-details="true"
+                            :rules="rules.message"
+                            outlined dense
                             class="custom-input rounded-lg mb-5 white--text"
                             name="input-7-4"
                             :label="$t('message')"
@@ -63,11 +74,11 @@
                         ></v-textarea>
 
                         <div class="d-flex" :class="$i18n.locale == 'en' ? ['align-end justify-end'] : ['align-start justify-start']">
-                            <v-btn class="text-capitalize white--text" width="30%" color="primary" large>
+                            <v-btn class="text-capitalize white--text" width="30%" color="primary" large @click="send">
                                 {{ $t('send') }} <v-icon class="ml-2">$vuetify.icons.values.moa_arrow_white</v-icon>
                             </v-btn>
                         </div>
-                    </div>
+                    </v-form>
                 </v-col>
             </v-row>
 
@@ -85,11 +96,51 @@ export default {
         return {
             form: {
                 name: '',
-                mobile: '',
+                phone: '',
                 email: '',
                 subject: '',
                 message: ''
+            },
+            success: false,
+            rules: {
+                name: [value => !!value || 'Required.'],
+                phone: [
+                    value => !!value || 'Required.',
+                    value => (value || '').length == 11 || 'Max 11 characters'],
+                email: [
+                    value => !!value || 'Required.',
+                    value => {
+                    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    return pattern.test(value) || 'Invalid e-mail.'
+                    }
+                ],
+                subject: [value => !!value || 'Required.', value => (value || '').length >= 20 || 'Subject should be atleast 20 characters'],
+                message: [value => !!value || 'Required.']
             }
+        }
+    },
+    methods: {
+        closeAlert() {
+            this.success = false
+        },
+        send() {
+
+            let valid = this.$refs.form.validate();
+
+            if(!valid) {
+                return
+            }
+            
+            this.$api.post('/contact', this.form).then(res => {
+                this.success = true;
+                this.reset();
+            }).catch(err => {
+                console.log(err.response.data.errors);
+            })
+        },
+        reset() {
+            this.$refs.form.reset();
+            this.$refs.form.resetValidation();
         }
     }
 }
@@ -126,9 +177,18 @@ export default {
 }
 
 .custom-input.v-input input,
-.custom-input.v-input textarea{
+.custom-input.v-input textarea, 
+.custom-input .v-messages__message {
     color: #fff !important;
     font-size: .9em;
+}
+
+.custom-input .v-text-field__details {
+    margin-bottom: 0 !important;
+}
+
+.custom-input .v-messages__message {
+    font-weight: bold;
 }
 
 .custom-input .v-label {

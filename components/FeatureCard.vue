@@ -1,7 +1,7 @@
 <template>
     <v-col cols="6" sm="3" md="4" lg="3" class="d-flex justify-center align-center mb-5">
         <v-hover :disabled="vb.smAndDown" v-slot="{ hover }">
-            <v-card :class="{ 'on-hover': hover && !vb.smAndDown }" class="feature-card d-flex justify-center align-center rounded-xl overflow-hidden" height="200" width="200">
+            <v-card :class="{ 'on-hover': hover && !vb.smAndDown }" class="primary feature-card d-flex justify-center align-center rounded-xl overflow-hidden" height="200" width="200">
                 <span class="test" v-if="!hover"></span>
                 <v-img
                     :src="img"
@@ -9,7 +9,7 @@
                     gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                     height="200px"
                 >
-                <v-card-title class="caption font-weight-bold">{{ title }}</v-card-title>
+                <v-card-title class="caption font-weight-bold text-capitalize">{{ title }}</v-card-title>
                 </v-img>
             </v-card>
         </v-hover>

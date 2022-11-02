@@ -1,11 +1,12 @@
 <template>
   <div class="mb-10 mt-10">
     <v-container>
-        <v-row class="mb-10 mt-10">
-            <v-col cols="12" md="3" class="d-flex align-start justify-start">
+
+        <v-row class="mb-10 mt-10" v-for="(section, index) in sections" :key="index">
+            <v-col cols="12" md="3" class="d-flex align-start justify-start" :order="vb.smAndDown || index % 2 == 0 ? 'first': 'last'">
                 <div>
-                    <h2 dir="auto" class="mb-10">{{ $t('shop') }}</h2>
-                    <p dir="auto">The ultimate shopping destination.</p>
+                    <h2 dir="auto" class="mb-10">{{ $t(section.name.toLowerCase()) }}</h2>
+                    <p dir="auto">{{ section.description }}</p>
                     <a href="#" class="more-text pa-0 px-1 text-capitalize font-weight-bold">
                         More <v-icon class="ml-2">$vuetify.icons.values.moa_arrow</v-icon>
                     </a>
@@ -13,44 +14,11 @@
             </v-col>
             <v-col cols="12" md="9">
                 <v-row no-gutters>
-                    <FeatureCard v-for="(item, key) in items['shop']" :key="key" :title="item.title" :img="item.image" />
+                    <FeatureCard v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
                 </v-row>
             </v-col>
         </v-row>
 
-        <v-row class="mb-10 mt-10">
-            <v-col cols="12" md="9">
-                <v-row no-gutters>
-                    <FeatureCard v-for="(item, key) in items['dine']" :key="key" :title="item.title" :img="item.image" />
-                </v-row>
-            </v-col>
-            <v-col cols="12" md="3" class="d-flex align-start justify-start" :order="vb.smAndDown ? 'first': 'last'">
-                <div>
-                    <h2 dir="auto" class="mb-10">{{ $t('dine') }}</h2>
-                    <p dir="auto"> Discover and exciting seletion of dining options. Dine in style with more than 40 restaurants and cafes</p>
-                    <a href="#" class="more-text pa-0 px-1 text-capitalize font-weight-bold">
-                        More <v-icon class="ml-2">$vuetify.icons.values.moa_arrow</v-icon>
-                    </a>
-                </div>
-            </v-col>
-        </v-row>
-
-         <v-row class="mb-10 mt-10">
-            <v-col cols="12" md="3" class="d-flex align-start justify-start">
-                <div>
-                    <h2 dir="auto" class="mb-10">{{ $t('entertain') }}</h2>
-                    <p dir="auto">Elevate your entertainment with MOA we've got so many ways to make everyone happy, both outdoors and indoors.</p>
-                    <a href="#" class="more-text pa-0 px-1 text-capitalize font-weight-bold">
-                        More <v-icon class="ml-2 white--text">$vuetify.icons.values.moa_arrow</v-icon>
-                    </a>
-                </div>
-            </v-col>
-            <v-col cols="12" md="9">
-                <v-row no-gutters>
-                    <FeatureCard v-for="(item, key) in items['entertainment']" :key="key" :title="item.title" :img="item.image" />
-                </v-row>
-            </v-col>
-        </v-row>
     </v-container>
   </div>
 </template>
@@ -65,6 +33,7 @@ export default {
     },
     data() {
         return {
+            sections: [],
             items: {
                 shop: [
                     { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
@@ -90,9 +59,18 @@ export default {
     computed: {
         vb() {
             return this.$vuetify.breakpoint
-        },
-        
+        }
     },
+    mounted() {
+        this.pull();
+    },
+    methods: {
+        async pull() {
+            await this.$api.get('/tenants_sections').then(res => {
+                this.sections = res.data.data;
+            })
+        }
+    }
 }
 </script>
 
