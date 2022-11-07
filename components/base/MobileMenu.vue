@@ -1,10 +1,10 @@
 <template>
    <div>
-        <v-row no-gutters>
+        <v-row no-gutters class="mb-4">
             <v-col cols="12">
                 <div class="d-flex align-center justify-start">
                     <div class="logo pa-2">
-                        <div class="d-flex align-center justify-center ">
+                        <div @click="go('/')" class="d-flex align-center justify-center ">
                             <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
 
                 <v-list class="mt-10 mb-10">
                     <v-list-item class="item-link mb-2" v-for="(item, index) in links" :key="index">
-                        <v-list-item-content>
+                        <v-list-item-content @click="go(item.to)">
                             <v-list-item-title class="item-link-title" dir="auto">
                                 <v-icon class="mr-1 icon">{{ item.icon }}</v-icon> {{ $t(item.lang) }}
                             </v-list-item-title>
@@ -118,7 +118,11 @@ export default {
     },
     methods: {
         menuActionClick(param) {
-            console.log(param)
+            this.go(param.to)
+        },
+        go(param) {
+            this.$router.push(param);
+            this.menuShown = false;
         }
     },
     watch: {
