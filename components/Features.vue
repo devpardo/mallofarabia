@@ -13,7 +13,7 @@
                 </div>
             </v-col>
             <v-col cols="12" md="9">
-                <v-slide-group v-if="vb.smAndDown" :show-arrows="vb.smAndDown">
+                <v-slide-group v-if="section.categories.length > 4" :show-arrows="vb.smAndDown">
                     <FeatureCard v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
                 </v-slide-group>
 

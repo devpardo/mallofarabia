@@ -3,8 +3,15 @@
         <v-row no-gutters dir="auto">
             <v-col cols="5">
                 <div class="d-flex">
-                    <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in links.linksLeft" :key="index">
-                        <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
+                    <div v-for="(item, index) in links.linksLeft" :key="index" class="text-center flex-grow-1 d-flex align-center justify-center">
+                        <nuxt-link v-if="item.to" class="toplink-item" 
+                            :to="item.to">
+                            <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
+                        </nuxt-link>
+
+                        <div v-else class="toplink-item">
+                            <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
+                        </div>
                     </div>
                 </div>
             </v-col>
@@ -17,15 +24,22 @@
             </v-col>
             <v-col cols="5">
                 <div class="d-flex">
-                    <div class="toplink-item text-center flex-grow-1 d-flex align-center justify-center" v-for="(item, index) in links.linksRight" :key="index">
-                        <v-icon class="icon mx-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
+                    <div v-for="(item, index) in links.linksRight" :key="index" class="text-center flex-grow-1 d-flex align-center justify-center">
+                        <nuxt-link v-if="item.to" class="toplink-item" 
+                            :to="item.to">
+                            <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
+                        </nuxt-link>
+
+                        <div v-else class="toplink-item">
+                            <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
+                        </div>
                     </div>
                 </div>
             </v-col>
         </v-row>
 
-        <v-row>
-            <v-container class="t-0">
+        <v-row class="mb-1">
+            <v-container class="mt-0">
                 <div class="main-links d-flex align-start justify-start" dir="auto">
                     <span v-for="(item, index) in mainLinks" :key="index" 
                         class="mr-3 text-capitalize link-item py-1">
@@ -113,6 +127,8 @@ export default {
 .toplink-item {
     padding: 30px 0;
     font-size: 12px;
+    text-decoration: none;
+    color: initial;
 }
 
 .icon {
@@ -127,5 +143,9 @@ export default {
 
 .link-item {
     font-size: 1em;
+}
+
+.debug {
+    border: 1px dashed red;
 }
 </style>

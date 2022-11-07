@@ -17,6 +17,12 @@
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },
+  "Loading": {
+    "description": "Auto imported from components/Loading.vue"
+  },
+  "PageHeader": {
+    "description": "Auto imported from components/PageHeader.vue"
+  },
   "WhatsHappening": {
     "description": "Auto imported from components/WhatsHappening.vue"
   },

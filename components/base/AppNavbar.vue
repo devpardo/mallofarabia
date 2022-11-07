@@ -29,17 +29,17 @@ export default {
     data() {
         return {
             linksLeft: [
-                { name: 'Opening Hours', lang: 'opening_hours', icon: '$vuetify.icons.values.hours_icon'}, 
-                { name: 'Careers', lang: 'careers', icon: '$vuetify.icons.values.careers_icon'},
+                { name: 'Opening Hours', lang: 'opening_hours', icon: '$vuetify.icons.values.hours_icon', to: '/opening-hours'}, 
+                { name: 'Careers', lang: 'careers', icon: '$vuetify.icons.values.careers_icon', to: '/careers'},
                 { name: '16269', lang: 'phone', icon: '$vuetify.icons.values.telephone_icon'},
                 { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: '$vuetify.icons.values.location_icon'},
             ],
             linksRight: [
-                { name: 'Contact Us', lang: 'contact', icon: '$vuetify.icons.values.contact_icon'},
-                { name: 'About Us', lang: 'about', icon: '$vuetify.icons.values.about_icon'},
-                { name: 'Advertising', lang: 'advertising', icon: '$vuetify.icons.values.advertising'},
-                { name: 'Leasing', lang: 'leasing', icon: '$vuetify.icons.values.leasing'},
-                { name: 'Mall Map', lang: 'mall_map', icon: '$vuetify.icons.values.mall_map'},
+                { name: 'Contact Us', lang: 'contact', icon: '$vuetify.icons.values.contact_icon', to: '/contact'},
+                { name: 'About Us', lang: 'about', icon: '$vuetify.icons.values.about_icon', to: '/contact'},
+                { name: 'Advertising', lang: 'advertising', icon: '$vuetify.icons.values.advertising', to: '/advertising'},
+                { name: 'Leasing', lang: 'leasing', icon: '$vuetify.icons.values.leasing', to: '/leasing'},
+                { name: 'Mall Map', lang: 'mall_map', icon: '$vuetify.icons.values.mall_map', to: '/mall-map'},
             ],
             mainLinks: [
                 { name: 'Shop', lang: 'shop', children: [

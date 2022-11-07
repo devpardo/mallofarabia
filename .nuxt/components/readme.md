@@ -12,6 +12,8 @@ You can directly use them in pages and other components without the need to impo
 - `<FeatureCard>` | `<feature-card>` (components/FeatureCard.vue)
 - `<Features>` | `<features>` (components/Features.vue)
 - `<Jumbotron>` | `<jumbotron>` (components/Jumbotron.vue)
+- `<Loading>` | `<loading>` (components/Loading.vue)
+- `<PageHeader>` | `<page-header>` (components/PageHeader.vue)
 - `<WhatsHappening>` | `<whats-happening>` (components/WhatsHappening.vue)
 - `<BaseAppNavbar>` | `<base-app-navbar>` (components/base/AppNavbar.vue)
 - `<BaseDesktopMenu>` | `<base-desktop-menu>` (components/base/DesktopMenu.vue)
