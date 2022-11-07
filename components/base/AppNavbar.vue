@@ -31,8 +31,8 @@ export default {
             linksLeft: [
                 { name: 'Opening Hours', lang: 'opening_hours', icon: '$vuetify.icons.values.hours_icon', to: '/opening-hours'}, 
                 { name: 'Careers', lang: 'careers', icon: '$vuetify.icons.values.careers_icon', to: '/careers'},
-                { name: '16269', lang: 'phone', icon: '$vuetify.icons.values.telephone_icon'},
-                { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: '$vuetify.icons.values.location_icon'},
+                { name: '16269', lang: 'phone', icon: '$vuetify.icons.values.telephone_icon', type: 'phone'},
+                { name: 'Al Giza Desert, Giza Governorate', lang: 'address', icon: '$vuetify.icons.values.location_icon', type: 'location'},
             ],
             linksRight: [
                 { name: 'Contact Us', lang: 'contact', icon: '$vuetify.icons.values.contact_icon', to: '/contact'},

@@ -21,7 +21,7 @@ export default {
     fashion: 'الموضة',
     dine: 'المطاعم',
     other: 'العروض',
-    copyright: 'جميع الحقوق محفوظة لمراكز',
+    copyright: `${new Date().getFullYear()} جميع الحقوق محفوظة لمراكز`,
     privacy: 'سياسة الخصوصية',
     entity_group: 'عرض كيانات المجموعة',
     entertain: 'الترفيه',

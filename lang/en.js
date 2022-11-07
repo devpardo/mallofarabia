@@ -21,7 +21,7 @@ export default {
     fashion: 'Fashion',
     dine: 'Dine',
     other: 'Others',
-    copyright: '© Copyright Marakez 2020. All Rights Reserved.',
+    copyright: `© Copyright Marakez ${new Date().getFullYear()}. All Rights Reserved.`,
     privacy: 'Privacy Policy',
     entity_group: 'View All Group Entities',
     entertain: 'Entertain',

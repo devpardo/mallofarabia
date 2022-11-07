@@ -9,7 +9,7 @@
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </nuxt-link>
 
-                        <div v-else class="toplink-item">
+                        <div v-else class="toplink-item" @click="goTo(item)">
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </div>
                     </div>
@@ -105,8 +105,11 @@
 </template>
 
 <script>
+import mixin from '@/components/mixins'
+
 export default {
     name: 'DesktopMenu',
+    mixins: [mixin],
     props: {
         links: {
             type: Object,
