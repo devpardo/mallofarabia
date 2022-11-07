@@ -1,7 +1,7 @@
 <template>
-    <v-row class="page-header white--text primary" :style="pageBg">
-        <v-col class="d-flex align-center justify-center">
-            <v-container class="text-center">
+    <v-row no-gutters class="page-header white--text primary" :style="pageBg">
+        <v-col class="page-header-banner d-flex align-center justify-center">
+            <v-container class="text-left">
                 <h1>{{ title }}</h1>
                 <p>{{ subtitle }}</p>
             </v-container>
@@ -35,5 +35,11 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    .page-header-banner {
+        background-image: url('../assets/images/banner.png');
+        background-size: cover;
+        background-position: -20vw;
+    }
 }
 </style>
