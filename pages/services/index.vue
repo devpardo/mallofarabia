@@ -5,7 +5,7 @@
         <v-row>
             <v-col>
                 <v-container>
-                    {{ contents }}
+                    <pre>{{ contents }}</pre>
                 </v-container>
             </v-col>
         </v-row>
@@ -46,8 +46,8 @@ export default {
         async pull() {
             try {
                 this.loading = true;
-                let res =  await this.$api.get('/careers');
-                this.contents = {...res.data}
+                let res =  await this.$api.get('/services');
+                //this.contents = res.data.data;
                 this.loading = false;
             } catch (error) {
                 console.log(error);

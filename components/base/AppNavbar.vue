@@ -54,12 +54,12 @@ export default {
                     { name: 'Dine 3' },
                     { name: 'Dine 4' }
                 ] },
-                { name: 'Entertain', lang: 'entertain', children: [] },
-                { name: 'Cinema', lang: 'cinema', children: [] },
-                { name: 'Train', lang: 'train', children: [] },
-                { name: 'Events', lang: 'events', children: [] },
-                { name: 'Services', lang: 'services', children: [] },
-                { name: 'Offers', lang: 'offers', children: [] }
+                { name: 'Entertain', lang: 'entertain', children: [], to: '/dine' },
+                { name: 'Cinema', lang: 'cinema', children: [], to: '/dine' },
+                { name: 'Train', lang: 'train', children: [], to: '/dine' },
+                { name: 'Events', lang: 'events', children: [], to: '/dine' },
+                { name: 'Services', lang: 'services', children: [], to: '/services' },
+                { name: 'Offers', lang: 'offers', children: [], to: '/dine' }
             ]
         }
     },

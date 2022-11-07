@@ -1,7 +1,7 @@
 <template>
-    <v-overlay :value="loading">
+    <v-overlay opacity="1" color="white" :value="loading">
 
-        <v-icon>mdi-send</v-icon>
+        <v-img :src="require('../assets/images/loading.gif')"/>
 
         <!-- <v-progress-circular
             indeterminate

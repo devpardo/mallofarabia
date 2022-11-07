@@ -28,6 +28,13 @@
     "_name": "_73a6183e"
   },
   {
+    "name": "dine___en",
+    "path": "/dine",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
+    "chunkName": "pages/dine/index",
+    "_name": "_39418a31"
+  },
+  {
     "name": "leasing___en",
     "path": "/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
@@ -47,6 +54,20 @@
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
     "chunkName": "pages/opening-hours/index",
     "_name": "_dd53edca"
+  },
+  {
+    "name": "privacy-policy___en",
+    "path": "/privacy-policy",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
+    "chunkName": "pages/privacy-policy/index",
+    "_name": "_2f2a220c"
+  },
+  {
+    "name": "services___en",
+    "path": "/services",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
+    "chunkName": "pages/services/index",
+    "_name": "_03a21e13"
   },
   {
     "name": "advertising___ar",
@@ -70,6 +91,13 @@
     "_name": "_73a6183e"
   },
   {
+    "name": "dine___ar",
+    "path": "/ar/dine",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
+    "chunkName": "pages/dine/index",
+    "_name": "_39418a31"
+  },
+  {
     "name": "leasing___ar",
     "path": "/ar/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
@@ -89,6 +117,20 @@
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
     "chunkName": "pages/opening-hours/index",
     "_name": "_dd53edca"
+  },
+  {
+    "name": "privacy-policy___ar",
+    "path": "/ar/privacy-policy",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
+    "chunkName": "pages/privacy-policy/index",
+    "_name": "_2f2a220c"
+  },
+  {
+    "name": "services___ar",
+    "path": "/ar/services",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
+    "chunkName": "pages/services/index",
+    "_name": "_03a21e13"
   },
   {
     "name": "index___en",

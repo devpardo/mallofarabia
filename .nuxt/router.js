@@ -8,9 +8,12 @@ const _3e0feee5 = () => interopDefault(import('../pages/advertising/index.vue' /
 const _7ad28de0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _3431c236 = () => interopDefault(import('../pages/careers/index.vue' /* webpackChunkName: "pages/careers/index" */))
 const _73a6183e = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
+const _39418a31 = () => interopDefault(import('../pages/dine/index.vue' /* webpackChunkName: "pages/dine/index" */))
 const _d8e3b8d0 = () => interopDefault(import('../pages/leasing/index.vue' /* webpackChunkName: "pages/leasing/index" */))
 const _457f5cd0 = () => interopDefault(import('../pages/mall-map/index.vue' /* webpackChunkName: "pages/mall-map/index" */))
 const _dd53edca = () => interopDefault(import('../pages/opening-hours/index.vue' /* webpackChunkName: "pages/opening-hours/index" */))
+const _2f2a220c = () => interopDefault(import('../pages/privacy-policy/index.vue' /* webpackChunkName: "pages/privacy-policy/index" */))
+const _03a21e13 = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
 
 const emptyFn = () => {}
 
@@ -40,6 +43,10 @@ export const routerOptions = {
     component: _73a6183e,
     name: "contact___en"
   }, {
+    path: "/dine",
+    component: _39418a31,
+    name: "dine___en"
+  }, {
     path: "/leasing",
     component: _d8e3b8d0,
     name: "leasing___en"
@@ -51,6 +58,14 @@ export const routerOptions = {
     path: "/opening-hours",
     component: _dd53edca,
     name: "opening-hours___en"
+  }, {
+    path: "/privacy-policy",
+    component: _2f2a220c,
+    name: "privacy-policy___en"
+  }, {
+    path: "/services",
+    component: _03a21e13,
+    name: "services___en"
   }, {
     path: "/ar/advertising",
     component: _3e0feee5,
@@ -64,6 +79,10 @@ export const routerOptions = {
     component: _73a6183e,
     name: "contact___ar"
   }, {
+    path: "/ar/dine",
+    component: _39418a31,
+    name: "dine___ar"
+  }, {
     path: "/ar/leasing",
     component: _d8e3b8d0,
     name: "leasing___ar"
@@ -75,6 +94,14 @@ export const routerOptions = {
     path: "/ar/opening-hours",
     component: _dd53edca,
     name: "opening-hours___ar"
+  }, {
+    path: "/ar/privacy-policy",
+    component: _2f2a220c,
+    name: "privacy-policy___ar"
+  }, {
+    path: "/ar/services",
+    component: _03a21e13,
+    name: "services___ar"
   }, {
     path: "/",
     component: _7ad28de0,

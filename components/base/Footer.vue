@@ -63,9 +63,10 @@
                                 </template>
                                 <v-list min-width="150">
                                     <v-list-item
-                                        v-for="(child, idx) in 5" :key="idx"
+                                        v-for="(item, idx) in group_entities" :key="idx"
                                     >
-                                    <v-list-item-title>Name name name</v-list-item-title>
+                                    <v-list-item-title v-if="$i18n.locale !== 'en'" @click="go(item.url)">{{ item.name_ar }}</v-list-item-title>
+                                    <v-list-item-title v-if="$i18n.locale !== 'ar'" @click="go(item.url)">{{ item.name_en }}</v-list-item-title>
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
@@ -92,6 +93,7 @@ export default {
     name: 'Footer',
     data() {
         return {
+            group_entities: [],
             sm_links: {
                 facebook: {
                     icon: 'mdi-facebook',
@@ -145,6 +147,21 @@ export default {
                     { title: 'Advertising', to: '/'}
                 ]
             }
+        }
+    },
+    mounted() {
+        this.getEntites();
+    },
+    methods: {
+        async getEntites() {
+            let entities = await this.$api.get('/group_entities');
+
+            this.group_entities = entities.data?.data;
+
+            console.log(this.group_entities);
+        },
+        go(param) {
+            window.location.href = param;
         }
     }
 }

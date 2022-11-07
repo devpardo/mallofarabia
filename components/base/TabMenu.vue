@@ -3,21 +3,27 @@
         <v-row no-gutters>
             <v-col cols="12">
                 <div class="d-flex align-center justify-center mb-2">
-                    <div class="logo pa-2">
+                    <div  @click="go('/')" class="logo pa-2">
                         <div class="d-flex align-center justify-center">
                             <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex align-center justify-center" style="flex-wrap: wrap">
-                    <a class="toplink-item text-center d-flex align-center justify-center pa-3 text--primary" v-for="(item, index) in links" :key="index">
-                        <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
-                    </a>
+                    <div class="text-center d-flex align-center justify-center pa-3 text--primary" v-for="(item, index) in links" :key="index">
+                        <nuxt-link v-if="item.to" :to="item.to" class="toplink-item">
+                            <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
+                        </nuxt-link>
+
+                        <a href="#" v-else class="toplink-item">
+                            <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
+                        </a>
+                    </div>
                 </div>
             </v-col>
         </v-row>
 
-        <v-row>
+        <v-row class="mb-1">
             <v-container class="t-0">
                 <div class="main-links d-flex align-start justify-start">
                     <span v-for="(item, index) in mainLinks" :key="index" 
@@ -46,13 +52,10 @@
                         </div>
                         
 
-                        <v-btn
-                            v-else 
-                            class="text-capitalize"
-                            text
-                        >
+                        <nuxt-link v-else class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
+                            :to="item.to">
                             {{ $t(`links.${item.lang}`) }}
-                        </v-btn>
+                        </nuxt-link>
                                     
                     </span>
 
@@ -97,6 +100,11 @@ export default {
             type: Array,
             default: () => []
         }
+    },
+    methods: {
+        go(param) {
+            this.$router.push(param);
+        }
     }
 }
 </script>
@@ -108,6 +116,8 @@ export default {
 
 .toplink-item {
     font-size: 1em;
+    color: inherit;
+    text-decoration: none;
 }
 
 .icon {

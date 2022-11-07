@@ -16,7 +16,7 @@
                 </div>
             </v-col>
             <v-col cols="2" class="d-flex align-center justify-center">
-                <div class="logo pa-2">
+                <div @click="go('/')" class="logo pa-2">
                     <div class="d-flex align-center justify-center ">
                         <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
                     </div>
@@ -67,13 +67,10 @@
                         </div>
                         
 
-                        <v-btn
-                            v-else 
-                            class="text-capitalize"
-                            text
-                        >
+                        <nuxt-link v-else class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
+                            :to="item.to">
                             {{ $t(`links.${item.lang}`) }}
-                        </v-btn>
+                        </nuxt-link>
                                     
                     </span>
 
@@ -118,6 +115,11 @@ export default {
         mainLinks: {
             type: Array,
             default: () => []
+        }
+    },
+    methods: {
+        go(param) {
+            this.$router.push(param);
         }
     }
 }

@@ -29,10 +29,10 @@ export default {
         return {
             loading: false,
             contents: {
-                page_description: null,
-                page_image: null,
-                page_keywords: null,
-                page_label: null,
+                page_description:'',
+                page_image: '',
+                page_keywords:'',
+                page_label: '',
                 data: {}
             }
         }

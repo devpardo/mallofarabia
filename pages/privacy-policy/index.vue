@@ -46,8 +46,8 @@ export default {
         async pull() {
             try {
                 this.loading = true;
-                let res =  await this.$api.get('/careers');
-                this.contents = {...res.data}
+                let res =  await this.$api.get('/privacy_policy');
+                
                 this.loading = false;
             } catch (error) {
                 console.log(error);
