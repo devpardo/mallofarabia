@@ -89,11 +89,15 @@
 </template>
 
 <script>
+
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
     name: 'Footer',
     data() {
         return {
             group_entities: [],
+            social_links: [],
             sm_links: {
                 facebook: {
                     icon: 'mdi-facebook',
@@ -149,6 +153,9 @@ export default {
             }
         }
     },
+    computed: {
+        
+    },
     mounted() {
         this.getEntites();
     },
@@ -157,8 +164,6 @@ export default {
             let entities = await this.$api.get('/group_entities');
 
             this.group_entities = entities.data?.data;
-
-            console.log(this.group_entities);
         },
         go(param) {
             window.location.href = param;

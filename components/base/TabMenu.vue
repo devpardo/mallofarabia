@@ -5,13 +5,14 @@
                 <div class="d-flex align-center justify-center mb-2">
                     <div  @click="go('/')" class="logo pa-2">
                         <div class="d-flex align-center justify-center">
-                            <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
+                            <!-- <v-img block contain :src="siteSettings.logo_en" v-if="$i18n.locale !== 'ar'"/>
+                            <v-img block contain :src="siteSettings.logo_ar" v-else/> -->
                         </div>
                     </div>
                 </div>
                 <div class="d-flex align-center justify-center" style="flex-wrap: wrap">
                     <div class="text-center d-flex align-center justify-center pa-3 text--primary" v-for="(item, index) in links" :key="index">
-                        <nuxt-link v-if="item.to" :to="item.to" class="toplink-item">
+                        <nuxt-link v-if="item.to" :to="localePath(item.to)" class="toplink-item">
                             <v-icon class="icon mr-1">{{ item.icon }}</v-icon> {{ $t(item.lang) }} 
                         </nuxt-link>
 
@@ -53,7 +54,7 @@
                         
 
                         <nuxt-link v-else class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
-                            :to="item.to">
+                            :to="localePath(item.to)">
                             {{ $t(`links.${item.lang}`) }}
                         </nuxt-link>
                                     
@@ -89,6 +90,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'TabMenu',
     props: {
@@ -100,6 +102,9 @@ export default {
             type: Array,
             default: () => []
         }
+    },
+    computed: {
+        ...mapGetters('settings', ['siteSettings'])
     },
     methods: {
         go(param) {

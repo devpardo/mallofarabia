@@ -1,11 +1,12 @@
 <template>
     <div>
+        {{ siteSettings }}
         <v-row no-gutters dir="auto">
             <v-col cols="5">
                 <div class="d-flex">
                     <div v-for="(item, index) in links.linksLeft" :key="index" class="text-center flex-grow-1 d-flex align-center justify-center">
                         <nuxt-link v-if="item.to" class="toplink-item" 
-                            :to="item.to">
+                            :to="localePath(item.to)">
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </nuxt-link>
 
@@ -17,8 +18,9 @@
             </v-col>
             <v-col cols="2" class="d-flex align-center justify-center">
                 <div @click="go('/')" class="logo pa-2">
-                    <div class="d-flex align-center justify-center ">
-                        <v-img block contain :src="require('../../assets/images/logo-en.png')"/>
+                    <div class="d-flex align-center justify-center">
+                        <v-img block contain :src="siteSettings?.logo_en" v-if="$i18n.locale !== 'ar'"/>
+                        <v-img block contain :src="siteSettings?.logo_ar" v-else/>
                     </div>
                 </div>
             </v-col>
@@ -26,7 +28,7 @@
                 <div class="d-flex">
                     <div v-for="(item, index) in links.linksRight" :key="index" class="text-center flex-grow-1 d-flex align-center justify-center">
                         <nuxt-link v-if="item.to" class="toplink-item" 
-                            :to="item.to">
+                            :to="localePath(item.to)">
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </nuxt-link>
 
@@ -68,7 +70,7 @@
                         
 
                         <nuxt-link v-else class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
-                            :to="item.to">
+                            :to="localePath(item.to)">
                             {{ $t(`links.${item.lang}`) }}
                         </nuxt-link>
                                     
@@ -106,6 +108,7 @@
 
 <script>
 import mixin from '@/components/mixins'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     name: 'DesktopMenu',
@@ -119,6 +122,9 @@ export default {
             type: Array,
             default: () => []
         }
+    },
+    computed: {
+        ...mapGetters('settings', ['siteSettings'])
     },
     methods: {
         go(param) {

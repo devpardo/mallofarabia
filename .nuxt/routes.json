@@ -3,140 +3,120 @@
     "name": "advertising___en",
     "path": "/advertising",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/advertising/index.vue",
-    "chunkName": "pages/advertising/index",
-    "_name": "_3e0feee5"
+    "chunkName": "pages/advertising/index"
   },
   {
     "name": "index___ar",
     "path": "/ar",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_7ad28de0"
+    "chunkName": "pages/index"
   },
   {
     "name": "careers___en",
     "path": "/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
-    "chunkName": "pages/careers/index",
-    "_name": "_3431c236"
+    "chunkName": "pages/careers/index"
   },
   {
     "name": "contact___en",
     "path": "/contact",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/contact/index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_73a6183e"
+    "chunkName": "pages/contact/index"
   },
   {
     "name": "dine___en",
     "path": "/dine",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
-    "chunkName": "pages/dine/index",
-    "_name": "_39418a31"
+    "chunkName": "pages/dine/index"
   },
   {
     "name": "leasing___en",
     "path": "/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
-    "chunkName": "pages/leasing/index",
-    "_name": "_d8e3b8d0"
+    "chunkName": "pages/leasing/index"
   },
   {
     "name": "mall-map___en",
     "path": "/mall-map",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/mall-map/index.vue",
-    "chunkName": "pages/mall-map/index",
-    "_name": "_457f5cd0"
+    "chunkName": "pages/mall-map/index"
   },
   {
     "name": "opening-hours___en",
     "path": "/opening-hours",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
-    "chunkName": "pages/opening-hours/index",
-    "_name": "_dd53edca"
+    "chunkName": "pages/opening-hours/index"
   },
   {
     "name": "privacy-policy___en",
     "path": "/privacy-policy",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
-    "chunkName": "pages/privacy-policy/index",
-    "_name": "_2f2a220c"
+    "chunkName": "pages/privacy-policy/index"
   },
   {
     "name": "services___en",
     "path": "/services",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
-    "chunkName": "pages/services/index",
-    "_name": "_03a21e13"
+    "chunkName": "pages/services/index"
   },
   {
     "name": "advertising___ar",
     "path": "/ar/advertising",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/advertising/index.vue",
-    "chunkName": "pages/advertising/index",
-    "_name": "_3e0feee5"
+    "chunkName": "pages/advertising/index"
   },
   {
     "name": "careers___ar",
     "path": "/ar/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
-    "chunkName": "pages/careers/index",
-    "_name": "_3431c236"
+    "chunkName": "pages/careers/index"
   },
   {
     "name": "contact___ar",
     "path": "/ar/contact",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/contact/index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_73a6183e"
+    "chunkName": "pages/contact/index"
   },
   {
     "name": "dine___ar",
     "path": "/ar/dine",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
-    "chunkName": "pages/dine/index",
-    "_name": "_39418a31"
+    "chunkName": "pages/dine/index"
   },
   {
     "name": "leasing___ar",
     "path": "/ar/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
-    "chunkName": "pages/leasing/index",
-    "_name": "_d8e3b8d0"
+    "chunkName": "pages/leasing/index"
   },
   {
     "name": "mall-map___ar",
     "path": "/ar/mall-map",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/mall-map/index.vue",
-    "chunkName": "pages/mall-map/index",
-    "_name": "_457f5cd0"
+    "chunkName": "pages/mall-map/index"
   },
   {
     "name": "opening-hours___ar",
     "path": "/ar/opening-hours",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
-    "chunkName": "pages/opening-hours/index",
-    "_name": "_dd53edca"
+    "chunkName": "pages/opening-hours/index"
   },
   {
     "name": "privacy-policy___ar",
     "path": "/ar/privacy-policy",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
-    "chunkName": "pages/privacy-policy/index",
-    "_name": "_2f2a220c"
+    "chunkName": "pages/privacy-policy/index"
   },
   {
     "name": "services___ar",
     "path": "/ar/services",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
-    "chunkName": "pages/services/index",
-    "_name": "_03a21e13"
+    "chunkName": "pages/services/index"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_7ad28de0"
+    "chunkName": "pages/index"
   }
 ]

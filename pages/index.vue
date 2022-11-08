@@ -1,6 +1,6 @@
 <template>
       <div>
-          <Jumbotron @scroll="test"/>
+          <Jumbotron @scroll="scroll"/>
           <WhatsHappening ref="events" />
           <BannerCards />
           <Features />
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 import Jumbotron from '@/components/Jumbotron'
 import WhatsHappening from '@/components/WhatsHappening'
 import BannerCards from '@/components/BannerCards'
@@ -27,15 +29,16 @@ export default {
     Contact,
     Features
   },
-  mounted() {
-    
+  computed: {
+    ...mapGetters('settings', ['siteSettings'])
+  },
+  created() {
+    this.setSettings()
   },
   methods: {
-    test() {
-
+    ...mapActions('settings', ['setSettings']),
+    scroll() {
       this.$refs.events.$el.scrollIntoView({ behavior: "smooth" });
-      
-      console.log();
     }
   }
 }
