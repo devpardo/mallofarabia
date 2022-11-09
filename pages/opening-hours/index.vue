@@ -5,7 +5,22 @@
         <v-row>
             <v-col>
                 <v-container>
-                    {{ contents }}
+                    <v-row>
+                        <v-col cols="3" v-for="(content, index) in contents.data" :key="index">
+                            <v-card class="rounded-xl">
+                                <v-card-title>{{ content.name }}</v-card-title>
+                                <v-divider class="mx-4"></v-divider>
+                                <v-card-text>
+                                    <div class="mb-3">Working Hours</div>
+                                    <div class="text--primary">
+                                        <span class="d-block" v-for="(hours, index) in content.working_hours" :key="index">
+                                            From: {{ hours.from }} to To: {{ hours.to }}
+                                        </span>
+                                    </div>
+                                </v-card-text>
+                            </v-card>
+                        </v-col>
+                    </v-row>
                 </v-container>
             </v-col>
         </v-row>

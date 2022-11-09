@@ -1,9 +1,12 @@
+let settings = window.localStorage.getItem('settings');
+    settings = JSON.parse(settings);
+
 export default {
     title_event: 'Whats Happening?',
     opening_hours: 'Opening Hours',
     careers: 'Careers',
-    phone: '16269',
-    address: 'Al Giza Desert, Giza Governorate',
+    phone: settings?.phone,
+    address: settings?.address,
     contact: 'Contact Us',
     about: 'About Us',
     advertising: 'Advertising',

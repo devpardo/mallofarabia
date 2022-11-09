@@ -20,6 +20,7 @@ You can directly use them in pages and other components without the need to impo
 - `<BaseFooter>` | `<base-footer>` (components/base/Footer.vue)
 - `<BaseMobileMenu>` | `<base-mobile-menu>` (components/base/MobileMenu.vue)
 - `<BaseTabMenu>` | `<base-tab-menu>` (components/base/TabMenu.vue)
+- `<Mixins>` | `<mixins>` (components/mixins/index.js)
 - `<IconsAboutIcon>` | `<icons-about-icon>` (components/icons/AboutIcon.vue)
 - `<IconsAdvertising>` | `<icons-advertising>` (components/icons/Advertising.vue)
 - `<IconsArrowDown>` | `<icons-arrow-down>` (components/icons/ArrowDown.vue)
@@ -33,4 +34,3 @@ You can directly use them in pages and other components without the need to impo
 - `<IconsMoaArrowWhite>` | `<icons-moa-arrow-white>` (components/icons/MoaArrowWhite.vue)
 - `<IconsTelephoneIcon>` | `<icons-telephone-icon>` (components/icons/TelephoneIcon.vue)
 - `<IconsTiktok>` | `<icons-tiktok>` (components/icons/Tiktok.vue)
-- `<Mixins>` | `<mixins>` (components/mixins/index.js)

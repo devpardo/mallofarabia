@@ -1,19 +1,22 @@
 <template>
 <div class="mt-10">
-    <div class="mb-6">
-        <v-container>
-            <v-row>
+    <div class="mb-6 mt-10">
+        <v-container class="mt-10">
+            <v-row class="mt-10">
                 <v-col cols="12" md="4">
                     <div class="d-flex flex-column align-start justify-start " dir="auto">
-                        <v-img class="mb-5" max-width="150" block contain :src="require('../../assets/images/logo-en.png')"/>
 
-                        <p class="caption">6th of October City, Juhaynah Square, Cairo</p>
 
-                        <h2><v-icon>mdi-phone</v-icon> 16269</h2>
+                        <v-img block contain max-width="150" class="mb-5" :src="siteSettings?.logo_en" v-if="$i18n.locale !== 'ar'"/>
+                        <v-img block contain max-width="150" class="mb-5" :src="siteSettings?.logo_ar" v-else/>
 
-                        <div class="d-flex mt-8">
+                        <p class="caption">{{ siteSettings?.address }}</p>
+
+                        <h2><v-icon>mdi-phone</v-icon> {{ siteSettings?.phone }}</h2>
+
+                        <div class="d-flex mt-8" v-if="siteSettings?.social_links">
                             <v-btn
-                                v-for="(item, i) in sm_links" :key="i"
+                                v-for="(item, i) in siteSettings.social_links" :key="i"
                                 depressed
                                 text
                                 fab
@@ -21,14 +24,18 @@
                                 small
                                 color="grey"
                                 class="mr-1"
+                                 @click="goLink(item.link_value)"
                             >
-                                <v-icon v-if="i == 'tiktok'" dark large>
+                                <v-icon>
+                                    {{ sm_links[item.link_type]['icon'] }}
+                                </v-icon>
+                                <!-- <v-icon v-if="i == 'tiktok'" dark large>
                                     $vuetify.icons.values.tiktok
                                 </v-icon>
 
                                 <v-icon v-else dark large>
                                     {{ item.icon }}
-                                </v-icon>
+                                </v-icon> -->
                             </v-btn>
                         </div>
                     </div>
@@ -47,11 +54,15 @@
             <v-row justify="space-between" class="mt-5"> 
                 <v-col cols="12" sm="12" md="6" lg="3">
                     <div class="d-flex align-center justify-start">
-                        <v-img class="mr-3" max-width="80" block contain :src="require('../../assets/images/marakez.png')"/>
+
+                        <v-img block contain max-width="80" :src="siteSettings?.logo_en" v-if="$i18n.locale !== 'ar'"/>
+                        <v-img block contain max-width="80" :src="siteSettings?.logo_ar" v-else/>
+
                         <div class="">
                             <v-menu offset-y content-class="elevation-0">
                                 <template v-slot:activator="{ on, attrs }">
                                     <v-btn
+
                                         class="text-capitalize"
                                         v-bind="attrs"
                                         v-on="on"
@@ -89,11 +100,12 @@
 </template>
 
 <script>
-
+import mixin from '@/components/mixins'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'Footer',
+    mixins: [mixin],
     data() {
         return {
             group_entities: [],
@@ -154,7 +166,7 @@ export default {
         }
     },
     computed: {
-        
+        ...mapGetters('settings', ['siteSettings'])
     },
     mounted() {
         this.getEntites();

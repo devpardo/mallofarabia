@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main v-if="!isLoading">
+      <Loading :loading="isLoading"/>
       <AppNavbar />
       <div>
         <Nuxt />
@@ -11,18 +12,30 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import AppNavbar from '@/components/base/AppNavbar'
 import Footer from '@/components/base/Footer'
+import Loading from '@/components/Loading'
 
 export default {
   name: 'DefaultLayout',
   components: {
     AppNavbar,
-    Footer
+    Footer,
+    Loading
   },
   data () {
     return {
     }
+  },
+  computed: {
+    ...mapGetters('settings', ['siteSettings', 'isLoading'])
+  },
+  created() {
+    this.setSettings();
+  },
+  methods: {
+    ...mapActions('settings', ['setSettings']),
   }
 }
 </script>

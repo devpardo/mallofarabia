@@ -1,6 +1,5 @@
 <template>
     <div>
-        {{ siteSettings }}
         <v-row no-gutters dir="auto">
             <v-col cols="5">
                 <div class="d-flex">
@@ -32,7 +31,7 @@
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </nuxt-link>
 
-                        <div v-else class="toplink-item">
+                        <div v-else class="toplink-item"  @click="goTo(item)">
                             <v-icon class="icon mx-1">{{item.icon}}</v-icon> {{ $t(item.lang) }} 
                         </div>
                     </div>

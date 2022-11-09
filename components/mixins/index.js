@@ -12,6 +12,12 @@ export default {
                     );
                 break;
             }
+        },
+        goLink(param) {
+            window.open(
+                param,
+                '_blank'
+            );
         }
     }
 }

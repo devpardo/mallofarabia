@@ -1,9 +1,13 @@
+let settings = window.localStorage.getItem('settings');
+    settings = JSON.parse(settings);
+
 export default {
     title_event: 'ما الجديد؟',
     opening_hours: 'مواعيد العمل',
     careers: 'وظائف',
     phone: 'رقم 16269',
-    address: 'الشيخ زايد،القاهرة',
+    phone: `${settings?.phone} رقم`,
+    address: settings?.address,
     contact: 'اتصل بنا',
     about: 'نبذة عنا',
     advertising: 'الاعلانات',

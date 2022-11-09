@@ -4,7 +4,7 @@
         <div class="contact-container pa-0 overflow-auto">
             <v-img
                 min-height="500" max-height="800"
-                :src="require('../assets/images/contact-form.jpeg')"
+                :src="noBg == true ? '' : require('../assets/images/contact-form.jpeg')"
                 class="white--text"
                 gradient="to bottom, rgba(0, 35, 75,.3), rgba(0, 35, 75, 1)"
             >
@@ -92,6 +92,12 @@
 <script>
 export default {
     name: 'Contact',
+    props: {
+        noBg: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             form: {

@@ -1,16 +1,7 @@
 <template>
     <div>
         <PageHeader :pageBg="pageBg" :title="contents.page_label" :subtitle="contents.page_description"/>
-
-        <v-row>
-            <v-col>
-                <v-container>
-                    {{ contents }}
-                </v-container>
-            </v-col>
-        </v-row>
-        
-
+        <Contact class="my-10" :no-bg="true"/>
         <Loading :loading="loading"/>
     </div>
 </template>
@@ -19,11 +10,13 @@
 
 import PageHeader from '@/components/PageHeader'
 import Loading from '@/components/Loading'
+import Contact from '@/components/Contact'
 
 export default {
     components: {
         Loading,
-        PageHeader
+        PageHeader,
+        Contact
     },
     data() {
         return {

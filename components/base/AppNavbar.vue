@@ -18,6 +18,9 @@
 import DesktopMenu from '@/components/base/DesktopMenu'
 import TabMenu from '@/components/base/TabMenu'
 import MobileMenu from '@/components/base/MobileMenu'
+import { mapActions, mapGetters } from 'vuex'
+
+let test = 'test';
 
 export default {
     name: 'AppNavbar',
@@ -36,7 +39,7 @@ export default {
             ],
             linksRight: [
                 { name: 'Contact Us', lang: 'contact', icon: '$vuetify.icons.values.contact_icon', to: '/contact'},
-                { name: 'About Us', lang: 'about', icon: '$vuetify.icons.values.about_icon', to: '/contact'},
+                { name: 'About Us', lang: 'about', icon: '$vuetify.icons.values.about_icon', to: '/about-us'},
                 { name: 'Advertising', lang: 'advertising', icon: '$vuetify.icons.values.advertising', to: '/advertising'},
                 { name: 'Leasing', lang: 'leasing', icon: '$vuetify.icons.values.leasing', to: '/leasing'},
                 { name: 'Mall Map', lang: 'mall_map', icon: '$vuetify.icons.values.mall_map', to: '/mall-map'},
@@ -64,6 +67,7 @@ export default {
         }
     },
     computed: {
+        ...mapGetters('settings', ['siteSettings']),
         vb() {
             return this.$vuetify.breakpoint;
         },

@@ -5,8 +5,8 @@
                 <div class="d-flex align-center justify-start">
                     <div class="logo pa-2">
                         <div @click="go('/')" class="d-flex align-center justify-center ">
-                            <!-- <v-img block contain :src="siteSettings.logo_en" v-if="$i18n.locale !== 'ar'"/>
-                            <v-img block contain :src="siteSettings.logo_ar" v-else/> -->
+                            <v-img block contain :src="siteSettings?.logo_en" v-if="$i18n.locale !== 'ar'"/>
+                            <v-img block contain :src="siteSettings?.logo_ar" v-else/>
                         </div>
                     </div>
                     <v-spacer></v-spacer>
