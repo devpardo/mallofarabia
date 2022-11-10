@@ -41,9 +41,6 @@
   "BaseTabMenu": {
     "description": "Auto imported from components/base/TabMenu.vue"
   },
-  "Mixins": {
-    "description": "Auto imported from components/mixins/index.js"
-  },
   "IconsAboutIcon": {
     "description": "Auto imported from components/icons/AboutIcon.vue"
   },
@@ -82,5 +79,8 @@
   },
   "IconsTiktok": {
     "description": "Auto imported from components/icons/Tiktok.vue"
+  },
+  "Mixins": {
+    "description": "Auto imported from components/mixins/index.js"
   }
 }

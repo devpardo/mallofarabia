@@ -6,7 +6,7 @@
             <v-col>
                 <v-container>
                     <v-row>
-                        <v-col cols="6" v-for="(content, index) in contents.data" :key="index" class="my-10">
+                        <v-col cols="12" sm="6" md="6" v-for="(content, index) in contents.data" :key="index" class="my-10">
                             <div class="px-10">
                                 <v-img height="200" :src="content.image" ></v-img>
                                 <h4 class="text-uppercase mt-10">{{ content.name }}</h4>

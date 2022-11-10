@@ -10,7 +10,7 @@
                             <h1>Vacancies</h1>
                             <v-divider class="my-3"></v-divider>
                         </v-col>
-                        <v-col cols="4" v-for="(content, index) in contents.data" :key="index">
+                        <v-col cols="12" sm="6" md="4" v-for="(content, index) in contents.data" :key="index">
                             <v-card class="rounded-xl">
                                 <v-card-title class="p">
                                     {{ content.name }}

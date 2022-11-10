@@ -9,9 +9,9 @@
                 gradient="to bottom, rgba(0, 35, 75,.3), rgba(0, 35, 75, 1)"
             >
 
-            <v-row class="pa-10">
+            <v-row :class="vb.mdAndUp ? 'pa-10' : 'pa-5'">
                 <v-col cols="12" md="6" :order="$i18n.locale == 'en' ? 'first': 'last'">
-                    <div class="d-flex align-center justify-start fill-height pa-5">
+                    <div class="d-flex align-center justify-start fill-height" :class="vb.smAndDown ? 'pa-1' : 'pa-5'">
                         <div class="d-flex flex-column" style="width: 100%">
                             <h1 dir="auto" class="text-uppercase">{{ $t('contact_us') }}</h1>
                             <p dir="auto">{{ $t('contact_tagline')}}</p>
@@ -21,7 +21,7 @@
                 <v-col cols="12" md="6">
                     <v-form ref="form" class="contact-form">
 
-                        <v-alert type="success" v-if="success" dismissible @input="closeAlert()">Sent</v-alert>
+                        <v-alert :class="vb.smAndDown ? 'pa-2' : ''" type="success" v-if="success" dismissible @input="closeAlert()">Sent</v-alert>
 
                         <v-text-field
                             v-model="form.name"
@@ -147,6 +147,11 @@ export default {
         reset() {
             this.$refs.form.reset();
             this.$refs.form.resetValidation();
+        }
+    },
+    computed: {
+        vb() {
+            return this.$vuetify.breakpoint
         }
     }
 }

@@ -6,7 +6,7 @@
             <v-col>
                 <v-container>
                     <v-row>
-                        <v-col cols="3" v-for="(content, index) in contents.data" :key="index">
+                        <v-col cols="12" md="3" v-for="(content, index) in contents.data" :key="index">
                             <v-card class="rounded-xl">
                                 <v-card-title>{{ content.name }}</v-card-title>
                                 <v-divider class="mx-4"></v-divider>

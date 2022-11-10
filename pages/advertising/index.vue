@@ -6,17 +6,17 @@
             <v-col>
                 <v-container>
                     <v-row>
-                        <v-col cols="4" v-for="(content, index) in contents.data" :key="index">
-                            <v-card class="rounded-xl">
+                        <v-col cols="12" sm="6" md="6" v-for="(content, index) in contents.data" :key="index">
+                            <v-card class="rounded-xl" min-height="650" max-height="700">
                                 <v-img
                                     height="250"
                                     :src="content.image"
                                 ></v-img>
 
-                                <v-card-title>{{ content.name }}</v-card-title>
+                                <v-card-title class="">{{ content.name }}</v-card-title>
 
-                                <v-card-text>
-                                    <div class="my-4 text-subtitle-1">
+                                <v-card-text class="py-1">
+                                    <div class="my-2 text-subtitle-1 overflow-auto ma-0" style="min-height: 50px; max-height: 140px">
                                         {{ content.description }}
                                     </div>
                                     <div class="caption">
@@ -26,10 +26,10 @@
 
                                 <v-divider class="mx-4"></v-divider>
 
-                                <v-card-title>Dimensions</v-card-title>
+                                <v-card-title class="py-1">Dimensions</v-card-title>
                                 <v-card-text>
                                     <v-chip-group
-                                        active-class="deep-purple accent-4 white--text"
+                                        active-class="deep-purple accent-4 white--text my-1"
                                         column
                                     >
                                         <v-chip  v-for="(dimension, i) in content.dimensions" :key="i">
@@ -43,9 +43,9 @@
 
                                 <v-divider class="mx-4"></v-divider>
 
-                                <v-card-title>Prices</v-card-title>
+                                <v-card-title class="py-1">Prices</v-card-title>
                                 <v-card-text>
-                                    <div class="my-4 text-subtitle-1">
+                                    <div class="my-1 text-subtitle-1">
                                         <p v-for="(price, i) in content.prices" :key="i">
                                             <span v-if="$i18n.locale !== 'en'">{{ price.price_ar }}</span>
                                             <span v-else>{{ price.price_en }}</span>

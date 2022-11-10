@@ -12,7 +12,6 @@ export { default as BaseDesktopMenu } from '../../components/base/DesktopMenu.vu
 export { default as BaseFooter } from '../../components/base/Footer.vue'
 export { default as BaseMobileMenu } from '../../components/base/MobileMenu.vue'
 export { default as BaseTabMenu } from '../../components/base/TabMenu.vue'
-export { default as Mixins } from '../../components/mixins/index.js'
 export { default as IconsAboutIcon } from '../../components/icons/AboutIcon.vue'
 export { default as IconsAdvertising } from '../../components/icons/Advertising.vue'
 export { default as IconsArrowDown } from '../../components/icons/ArrowDown.vue'
@@ -26,6 +25,7 @@ export { default as IconsMoaArrow } from '../../components/icons/MoaArrow.vue'
 export { default as IconsMoaArrowWhite } from '../../components/icons/MoaArrowWhite.vue'
 export { default as IconsTelephoneIcon } from '../../components/icons/TelephoneIcon.vue'
 export { default as IconsTiktok } from '../../components/icons/Tiktok.vue'
+export { default as Mixins } from '../../components/mixins/index.js'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
