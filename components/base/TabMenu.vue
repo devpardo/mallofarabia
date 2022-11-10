@@ -30,7 +30,7 @@
                     <span v-for="(item, index) in mainLinks" :key="index" 
                         class="mr-3 text-capitalize link-item py-1">
 
-                        <div v-if="item.children.length">
+                        <!-- <div v-if="item?.children?.length">
                             <v-menu offset-y content-class="elevation-0">
                                 <template v-slot:activator="{ on, attrs }">
                                     <v-btn
@@ -50,10 +50,10 @@
                                     </v-list-item>
                                 </v-list>
                             </v-menu>
-                        </div>
+                        </div> -->
                         
 
-                        <nuxt-link v-else class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
+                        <nuxt-link active-class="secondary rounded" class="text-capitalize v-btn v-btn--text theme--light v-size--default" tag="button"
                             :to="localePath(item.to)">
                             {{ $t(`links.${item.lang}`) }}
                         </nuxt-link>

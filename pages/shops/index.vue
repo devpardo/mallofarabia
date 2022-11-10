@@ -5,7 +5,11 @@
         <v-row>
             <v-col>
                 <v-container>
-                    <pre>{{ contents }}</pre>
+                    <v-row>
+                        <v-col>
+                            <pre>{{ contents.data }}</pre>
+                        </v-col>
+                    </v-row>
                 </v-container>
             </v-col>
         </v-row>
@@ -46,7 +50,7 @@ export default {
         async pull() {
             try {
                 this.loading = true;
-                let res =  await this.$api.get('/services');
+                let res =  await this.$api.get('/shops');
                 this.contents = {...res.data}
                 this.loading = false;
             } catch (error) {

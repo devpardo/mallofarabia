@@ -45,24 +45,14 @@ export default {
                 { name: 'Mall Map', lang: 'mall_map', icon: '$vuetify.icons.values.mall_map', to: '/mall-map'},
             ],
             mainLinks: [
-                { name: 'Shop', lang: 'shop', children: [
-                    { name: 'Shop 1' },
-                    { name: 'Shop 2' },
-                    { name: 'Shop 3' },
-                    { name: 'Shop 4' }
-                ] },
-                { name: 'Dine', lang: 'dine', children: [
-                    { name: 'Dine 1' },
-                    { name: 'Dine 2' },
-                    { name: 'Dine 3' },
-                    { name: 'Dine 4' }
-                ] },
-                { name: 'Entertain', lang: 'entertain', children: [], to: '/dine' },
+                { name: 'Shop', lang: 'shop', to: '/shops' },
+                { name: 'Dine', lang: 'dine', to: '/dine' },
+                { name: 'Entertain', lang: 'entertain', children: [], to: '/entertain' },
                 { name: 'Cinema', lang: 'cinema', children: [], to: '/cinema' },
                 { name: 'Train', lang: 'train', children: [], to: '/train' },
-                { name: 'Events', lang: 'events', children: [], to: '/dine' },
+                { name: 'Events', lang: 'events', children: [], to: '/events' },
                 { name: 'Services', lang: 'services', children: [], to: '/services' },
-                { name: 'Offers', lang: 'offers', children: [], to: '/dine' }
+                { name: 'Offers', lang: 'offers', children: [], to: '/offers' }
             ]
         }
     },

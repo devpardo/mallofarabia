@@ -11,11 +11,15 @@ const _3431c236 = () => interopDefault(import('../pages/careers/index.vue' /* we
 const _25433934 = () => interopDefault(import('../pages/cinema/index.vue' /* webpackChunkName: "pages/cinema/index" */))
 const _73a6183e = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
 const _39418a31 = () => interopDefault(import('../pages/dine/index.vue' /* webpackChunkName: "pages/dine/index" */))
+const _064388eb = () => interopDefault(import('../pages/entertain/index.vue' /* webpackChunkName: "pages/entertain/index" */))
+const _6065bf8e = () => interopDefault(import('../pages/events/index.vue' /* webpackChunkName: "pages/events/index" */))
 const _d8e3b8d0 = () => interopDefault(import('../pages/leasing/index.vue' /* webpackChunkName: "pages/leasing/index" */))
 const _457f5cd0 = () => interopDefault(import('../pages/mall-map/index.vue' /* webpackChunkName: "pages/mall-map/index" */))
+const _02410a8c = () => interopDefault(import('../pages/offers/index.vue' /* webpackChunkName: "pages/offers/index" */))
 const _dd53edca = () => interopDefault(import('../pages/opening-hours/index.vue' /* webpackChunkName: "pages/opening-hours/index" */))
 const _2f2a220c = () => interopDefault(import('../pages/privacy-policy/index.vue' /* webpackChunkName: "pages/privacy-policy/index" */))
 const _03a21e13 = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
+const _bf78f584 = () => interopDefault(import('../pages/shops/index.vue' /* webpackChunkName: "pages/shops/index" */))
 const _b9691d6e = () => interopDefault(import('../pages/train/index.vue' /* webpackChunkName: "pages/train/index" */))
 
 const emptyFn = () => {}
@@ -58,6 +62,14 @@ export const routerOptions = {
     component: _39418a31,
     name: "dine___en"
   }, {
+    path: "/entertain",
+    component: _064388eb,
+    name: "entertain___en"
+  }, {
+    path: "/events",
+    component: _6065bf8e,
+    name: "events___en"
+  }, {
     path: "/leasing",
     component: _d8e3b8d0,
     name: "leasing___en"
@@ -65,6 +77,10 @@ export const routerOptions = {
     path: "/mall-map",
     component: _457f5cd0,
     name: "mall-map___en"
+  }, {
+    path: "/offers",
+    component: _02410a8c,
+    name: "offers___en"
   }, {
     path: "/opening-hours",
     component: _dd53edca,
@@ -77,6 +93,10 @@ export const routerOptions = {
     path: "/services",
     component: _03a21e13,
     name: "services___en"
+  }, {
+    path: "/shops",
+    component: _bf78f584,
+    name: "shops___en"
   }, {
     path: "/train",
     component: _b9691d6e,
@@ -106,6 +126,14 @@ export const routerOptions = {
     component: _39418a31,
     name: "dine___ar"
   }, {
+    path: "/ar/entertain",
+    component: _064388eb,
+    name: "entertain___ar"
+  }, {
+    path: "/ar/events",
+    component: _6065bf8e,
+    name: "events___ar"
+  }, {
     path: "/ar/leasing",
     component: _d8e3b8d0,
     name: "leasing___ar"
@@ -113,6 +141,10 @@ export const routerOptions = {
     path: "/ar/mall-map",
     component: _457f5cd0,
     name: "mall-map___ar"
+  }, {
+    path: "/ar/offers",
+    component: _02410a8c,
+    name: "offers___ar"
   }, {
     path: "/ar/opening-hours",
     component: _dd53edca,
@@ -125,6 +157,10 @@ export const routerOptions = {
     path: "/ar/services",
     component: _03a21e13,
     name: "services___ar"
+  }, {
+    path: "/ar/shops",
+    component: _bf78f584,
+    name: "shops___ar"
   }, {
     path: "/ar/train",
     component: _b9691d6e,

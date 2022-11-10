@@ -6,7 +6,9 @@
             <v-col>
                 <v-container>
                     <v-row>
-                        <v-col>{{ contents }}</v-col>
+                        <v-col>
+                            <pre>{{ contents }}</pre>
+                        </v-col>
                     </v-row>
                 </v-container>
             </v-col>

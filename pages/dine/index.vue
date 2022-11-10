@@ -1,11 +1,15 @@
 <template>
     <div>
-        <PageHeader :pageBg="pageBg" :title="contents.page_label" :subtitle="contents.page_description"/>
+        <PageHeader :pageBg="pageBg" :title="contents?.page_name" :subtitle="contents?.page_description"/>
 
         <v-row>
             <v-col>
                 <v-container>
-                    {{ contents }}
+                    <!-- {{ contents.data }} -->
+
+                    <div>
+                        <pre>  {{ contents.data }}</pre>
+                    </div>
                 </v-container>
             </v-col>
         </v-row>
@@ -47,7 +51,7 @@ export default {
             try {
                 this.loading = true;
                 let res =  await this.$api.get('/dine');
-                
+                this.contents = {...res.data}
                 this.loading = false;
             } catch (error) {
                 console.log(error);

@@ -18,11 +18,9 @@ export default {
             type: Object
         },
         title: {
-            type: String,
             required: true
         },
         subtitle: {
-            type: String,
             required: true
         }
     },
