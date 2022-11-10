@@ -24,6 +24,12 @@
     "chunkName": "pages/careers/index"
   },
   {
+    "name": "cinema___en",
+    "path": "/cinema",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/index.vue",
+    "chunkName": "pages/cinema/index"
+  },
+  {
     "name": "contact___en",
     "path": "/contact",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/contact/index.vue",
@@ -66,6 +72,12 @@
     "chunkName": "pages/services/index"
   },
   {
+    "name": "train___en",
+    "path": "/train",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/train/index.vue",
+    "chunkName": "pages/train/index"
+  },
+  {
     "name": "about-us___ar",
     "path": "/ar/about-us",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/about-us/index.vue",
@@ -82,6 +94,12 @@
     "path": "/ar/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
     "chunkName": "pages/careers/index"
+  },
+  {
+    "name": "cinema___ar",
+    "path": "/ar/cinema",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/index.vue",
+    "chunkName": "pages/cinema/index"
   },
   {
     "name": "contact___ar",
@@ -124,6 +142,12 @@
     "path": "/ar/services",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
     "chunkName": "pages/services/index"
+  },
+  {
+    "name": "train___ar",
+    "path": "/ar/train",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/train/index.vue",
+    "chunkName": "pages/train/index"
   },
   {
     "name": "index___en",

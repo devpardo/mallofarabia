@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 .page-header {
     height: 300px;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 

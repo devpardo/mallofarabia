@@ -8,6 +8,7 @@ const _20d03a93 = () => interopDefault(import('../pages/about-us/index.vue' /* w
 const _3e0feee5 = () => interopDefault(import('../pages/advertising/index.vue' /* webpackChunkName: "pages/advertising/index" */))
 const _7ad28de0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _3431c236 = () => interopDefault(import('../pages/careers/index.vue' /* webpackChunkName: "pages/careers/index" */))
+const _25433934 = () => interopDefault(import('../pages/cinema/index.vue' /* webpackChunkName: "pages/cinema/index" */))
 const _73a6183e = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
 const _39418a31 = () => interopDefault(import('../pages/dine/index.vue' /* webpackChunkName: "pages/dine/index" */))
 const _d8e3b8d0 = () => interopDefault(import('../pages/leasing/index.vue' /* webpackChunkName: "pages/leasing/index" */))
@@ -15,6 +16,7 @@ const _457f5cd0 = () => interopDefault(import('../pages/mall-map/index.vue' /* w
 const _dd53edca = () => interopDefault(import('../pages/opening-hours/index.vue' /* webpackChunkName: "pages/opening-hours/index" */))
 const _2f2a220c = () => interopDefault(import('../pages/privacy-policy/index.vue' /* webpackChunkName: "pages/privacy-policy/index" */))
 const _03a21e13 = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
+const _b9691d6e = () => interopDefault(import('../pages/train/index.vue' /* webpackChunkName: "pages/train/index" */))
 
 const emptyFn = () => {}
 
@@ -44,6 +46,10 @@ export const routerOptions = {
     component: _3431c236,
     name: "careers___en"
   }, {
+    path: "/cinema",
+    component: _25433934,
+    name: "cinema___en"
+  }, {
     path: "/contact",
     component: _73a6183e,
     name: "contact___en"
@@ -72,6 +78,10 @@ export const routerOptions = {
     component: _03a21e13,
     name: "services___en"
   }, {
+    path: "/train",
+    component: _b9691d6e,
+    name: "train___en"
+  }, {
     path: "/ar/about-us",
     component: _20d03a93,
     name: "about-us___ar"
@@ -83,6 +93,10 @@ export const routerOptions = {
     path: "/ar/careers",
     component: _3431c236,
     name: "careers___ar"
+  }, {
+    path: "/ar/cinema",
+    component: _25433934,
+    name: "cinema___ar"
   }, {
     path: "/ar/contact",
     component: _73a6183e,
@@ -111,6 +125,10 @@ export const routerOptions = {
     path: "/ar/services",
     component: _03a21e13,
     name: "services___ar"
+  }, {
+    path: "/ar/train",
+    component: _b9691d6e,
+    name: "train___ar"
   }, {
     path: "/",
     component: _7ad28de0,

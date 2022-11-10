@@ -5,7 +5,7 @@
             <v-img
                 min-height="500" max-height="800"
                 :src="noBg == true ? '' : require('../assets/images/contact-form.jpeg')"
-                class="white--text"
+                class="white--text primary"
                 gradient="to bottom, rgba(0, 35, 75,.3), rgba(0, 35, 75, 1)"
             >
 

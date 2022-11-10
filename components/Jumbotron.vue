@@ -11,10 +11,10 @@
                         >
 
                         
-                        <div class="main-slider-sheet d-flex align-center justify-start" style="height: 100%">
+                        <div :class="vb.smAndDown ? 'gradient' : 'main-slider-sheet'" class="mb-3 d-flex align-center justify-start" style="height: 100%">
                             <div class="slide-content animate__animated animate__backInDown">
-                                <h3 class="text-h3 mb-7">{{ slide.title }}</h3>
-                                <p>{{ slide.description }}</p>
+                                <h3 class="text-h3 mb-7" :class="vb.smAndDown ? 'white--text' : ''">{{ slide.title }}</h3>
+                                <p :class="vb.smAndDown ? 'white--text' : ''">{{ slide.description }}</p>
                             </div>
                         </div>
                         
@@ -68,6 +68,11 @@ export default {
             ],
         }
     },
+    computed: {
+        vb() {
+            return this.$vuetify.breakpoint
+        }
+    },
     mounted() {
         this.pull();
     },
@@ -100,7 +105,6 @@ export default {
     }
 
     .main-slider-sheet {
-        margin-bottom: 3em;
         background-image: url('../assets/images/slider-vector.png');
         background-repeat: no-repeat;
         background-position: left;
@@ -120,5 +124,9 @@ export default {
             cursor: pointer;
         }
     }
+}
+
+.gradient {
+    background: linear-gradient(rgba(0, 72, 106, 0.5), rgb(0, 51, 74));
 }
 </style>

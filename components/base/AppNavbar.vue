@@ -58,8 +58,8 @@ export default {
                     { name: 'Dine 4' }
                 ] },
                 { name: 'Entertain', lang: 'entertain', children: [], to: '/dine' },
-                { name: 'Cinema', lang: 'cinema', children: [], to: '/dine' },
-                { name: 'Train', lang: 'train', children: [], to: '/dine' },
+                { name: 'Cinema', lang: 'cinema', children: [], to: '/cinema' },
+                { name: 'Train', lang: 'train', children: [], to: '/train' },
                 { name: 'Events', lang: 'events', children: [], to: '/dine' },
                 { name: 'Services', lang: 'services', children: [], to: '/services' },
                 { name: 'Offers', lang: 'offers', children: [], to: '/dine' }
