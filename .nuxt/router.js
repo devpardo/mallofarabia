@@ -21,6 +21,7 @@ const _2f2a220c = () => interopDefault(import('../pages/privacy-policy/index.vue
 const _03a21e13 = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
 const _bf78f584 = () => interopDefault(import('../pages/shops/index.vue' /* webpackChunkName: "pages/shops/index" */))
 const _b9691d6e = () => interopDefault(import('../pages/train/index.vue' /* webpackChunkName: "pages/train/index" */))
+const _4bda074e = () => interopDefault(import('../pages/cinema/_id.vue' /* webpackChunkName: "pages/cinema/_id" */))
 
 const emptyFn = () => {}
 
@@ -165,6 +166,14 @@ export const routerOptions = {
     path: "/ar/train",
     component: _b9691d6e,
     name: "train___ar"
+  }, {
+    path: "/ar/cinema/:id",
+    component: _4bda074e,
+    name: "cinema-id___ar"
+  }, {
+    path: "/cinema/:id",
+    component: _4bda074e,
+    name: "cinema-id___en"
   }, {
     path: "/",
     component: _7ad28de0,
