@@ -3,216 +3,252 @@
     "name": "about-us___en",
     "path": "/about-us",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/about-us/index.vue",
-    "chunkName": "pages/about-us/index"
+    "chunkName": "pages/about-us/index",
+    "_name": "_20d03a93"
   },
   {
     "name": "advertising___en",
     "path": "/advertising",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/advertising/index.vue",
-    "chunkName": "pages/advertising/index"
+    "chunkName": "pages/advertising/index",
+    "_name": "_3e0feee5"
   },
   {
     "name": "index___ar",
     "path": "/ar",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_7ad28de0"
   },
   {
     "name": "careers___en",
     "path": "/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
-    "chunkName": "pages/careers/index"
+    "chunkName": "pages/careers/index",
+    "_name": "_3431c236"
   },
   {
     "name": "cinema___en",
     "path": "/cinema",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/index.vue",
-    "chunkName": "pages/cinema/index"
+    "chunkName": "pages/cinema/index",
+    "_name": "_25433934"
   },
   {
     "name": "contact___en",
     "path": "/contact",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/contact/index.vue",
-    "chunkName": "pages/contact/index"
+    "chunkName": "pages/contact/index",
+    "_name": "_73a6183e"
   },
   {
     "name": "dine___en",
     "path": "/dine",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
-    "chunkName": "pages/dine/index"
+    "chunkName": "pages/dine/index",
+    "_name": "_39418a31"
   },
   {
     "name": "entertain___en",
     "path": "/entertain",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/entertain/index.vue",
-    "chunkName": "pages/entertain/index"
+    "chunkName": "pages/entertain/index",
+    "_name": "_064388eb"
   },
   {
     "name": "events___en",
     "path": "/events",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/events/index.vue",
-    "chunkName": "pages/events/index"
+    "chunkName": "pages/events/index",
+    "_name": "_6065bf8e"
   },
   {
     "name": "leasing___en",
     "path": "/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
-    "chunkName": "pages/leasing/index"
+    "chunkName": "pages/leasing/index",
+    "_name": "_d8e3b8d0"
   },
   {
     "name": "mall-map___en",
     "path": "/mall-map",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/mall-map/index.vue",
-    "chunkName": "pages/mall-map/index"
+    "chunkName": "pages/mall-map/index",
+    "_name": "_457f5cd0"
   },
   {
     "name": "offers___en",
     "path": "/offers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/offers/index.vue",
-    "chunkName": "pages/offers/index"
+    "chunkName": "pages/offers/index",
+    "_name": "_02410a8c"
   },
   {
     "name": "opening-hours___en",
     "path": "/opening-hours",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
-    "chunkName": "pages/opening-hours/index"
+    "chunkName": "pages/opening-hours/index",
+    "_name": "_dd53edca"
   },
   {
     "name": "privacy-policy___en",
     "path": "/privacy-policy",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
-    "chunkName": "pages/privacy-policy/index"
+    "chunkName": "pages/privacy-policy/index",
+    "_name": "_2f2a220c"
   },
   {
     "name": "services___en",
     "path": "/services",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
-    "chunkName": "pages/services/index"
+    "chunkName": "pages/services/index",
+    "_name": "_03a21e13"
   },
   {
     "name": "shops___en",
     "path": "/shops",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/shops/index.vue",
-    "chunkName": "pages/shops/index"
+    "chunkName": "pages/shops/index",
+    "_name": "_bf78f584"
   },
   {
     "name": "train___en",
     "path": "/train",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/train/index.vue",
-    "chunkName": "pages/train/index"
+    "chunkName": "pages/train/index",
+    "_name": "_b9691d6e"
   },
   {
     "name": "about-us___ar",
     "path": "/ar/about-us",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/about-us/index.vue",
-    "chunkName": "pages/about-us/index"
+    "chunkName": "pages/about-us/index",
+    "_name": "_20d03a93"
   },
   {
     "name": "advertising___ar",
     "path": "/ar/advertising",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/advertising/index.vue",
-    "chunkName": "pages/advertising/index"
+    "chunkName": "pages/advertising/index",
+    "_name": "_3e0feee5"
   },
   {
     "name": "careers___ar",
     "path": "/ar/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
-    "chunkName": "pages/careers/index"
+    "chunkName": "pages/careers/index",
+    "_name": "_3431c236"
   },
   {
     "name": "cinema___ar",
     "path": "/ar/cinema",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/index.vue",
-    "chunkName": "pages/cinema/index"
+    "chunkName": "pages/cinema/index",
+    "_name": "_25433934"
   },
   {
     "name": "contact___ar",
     "path": "/ar/contact",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/contact/index.vue",
-    "chunkName": "pages/contact/index"
+    "chunkName": "pages/contact/index",
+    "_name": "_73a6183e"
   },
   {
     "name": "dine___ar",
     "path": "/ar/dine",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/dine/index.vue",
-    "chunkName": "pages/dine/index"
+    "chunkName": "pages/dine/index",
+    "_name": "_39418a31"
   },
   {
     "name": "entertain___ar",
     "path": "/ar/entertain",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/entertain/index.vue",
-    "chunkName": "pages/entertain/index"
+    "chunkName": "pages/entertain/index",
+    "_name": "_064388eb"
   },
   {
     "name": "events___ar",
     "path": "/ar/events",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/events/index.vue",
-    "chunkName": "pages/events/index"
+    "chunkName": "pages/events/index",
+    "_name": "_6065bf8e"
   },
   {
     "name": "leasing___ar",
     "path": "/ar/leasing",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/leasing/index.vue",
-    "chunkName": "pages/leasing/index"
+    "chunkName": "pages/leasing/index",
+    "_name": "_d8e3b8d0"
   },
   {
     "name": "mall-map___ar",
     "path": "/ar/mall-map",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/mall-map/index.vue",
-    "chunkName": "pages/mall-map/index"
+    "chunkName": "pages/mall-map/index",
+    "_name": "_457f5cd0"
   },
   {
     "name": "offers___ar",
     "path": "/ar/offers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/offers/index.vue",
-    "chunkName": "pages/offers/index"
+    "chunkName": "pages/offers/index",
+    "_name": "_02410a8c"
   },
   {
     "name": "opening-hours___ar",
     "path": "/ar/opening-hours",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/opening-hours/index.vue",
-    "chunkName": "pages/opening-hours/index"
+    "chunkName": "pages/opening-hours/index",
+    "_name": "_dd53edca"
   },
   {
     "name": "privacy-policy___ar",
     "path": "/ar/privacy-policy",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/privacy-policy/index.vue",
-    "chunkName": "pages/privacy-policy/index"
+    "chunkName": "pages/privacy-policy/index",
+    "_name": "_2f2a220c"
   },
   {
     "name": "services___ar",
     "path": "/ar/services",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/services/index.vue",
-    "chunkName": "pages/services/index"
+    "chunkName": "pages/services/index",
+    "_name": "_03a21e13"
   },
   {
     "name": "shops___ar",
     "path": "/ar/shops",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/shops/index.vue",
-    "chunkName": "pages/shops/index"
+    "chunkName": "pages/shops/index",
+    "_name": "_bf78f584"
   },
   {
     "name": "train___ar",
     "path": "/ar/train",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/train/index.vue",
-    "chunkName": "pages/train/index"
+    "chunkName": "pages/train/index",
+    "_name": "_b9691d6e"
   },
   {
     "name": "cinema-id___ar",
     "path": "/ar/cinema/:id",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/_id.vue",
-    "chunkName": "pages/cinema/_id"
+    "chunkName": "pages/cinema/_id",
+    "_name": "_4bda074e"
   },
   {
     "name": "cinema-id___en",
     "path": "/cinema/:id",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/_id.vue",
-    "chunkName": "pages/cinema/_id"
+    "chunkName": "pages/cinema/_id",
+    "_name": "_4bda074e"
   },
   {
     "name": "index___en",
     "path": "/",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_7ad28de0"
   }
 ]

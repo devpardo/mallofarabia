@@ -17,6 +17,9 @@
   "Jumbotron": {
     "description": "Auto imported from components/Jumbotron.vue"
   },
+  "LatestMovies": {
+    "description": "Auto imported from components/LatestMovies.vue"
+  },
   "Loading": {
     "description": "Auto imported from components/Loading.vue"
   },

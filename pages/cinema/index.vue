@@ -223,8 +223,6 @@ export default {
     },
     methods: {
         test(whichArray) {
-           
-
             switch(whichArray) {
                 case 'latest_movies':
                     this.movieInfo = this.latest_movies[this.selected];
