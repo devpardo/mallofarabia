@@ -5,7 +5,10 @@
         <v-row>
             <v-col>
                 <v-container>
-                    <pre>{{ contents }}</pre>
+                    <v-col v-if="!contents.data.length">
+                            <h2>No Data Available</h2>
+                    </v-col>
+                    <v-col v-else><pre>{{ contents.data }}</pre></v-col>
                 </v-container>
             </v-col>
         </v-row>
