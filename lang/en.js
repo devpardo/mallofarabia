@@ -17,6 +17,7 @@ export default {
     contact_us: 'Contact Us',
     message: 'Message',
     subject: 'Subject',
+    brand_name: 'Brand Name',
     email: 'Email Address',
     mobile_number: 'Mobile Number',
     full_name: 'Full Name',

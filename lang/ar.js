@@ -18,6 +18,7 @@ export default {
     contact_us: 'تواصل معنا',
     message: 'التفاصيل',
     subject: 'العنوان',
+    brand_name: 'اسم العلامة التجارية',
     email: 'البريد الالكتروني',
     mobile_number: 'رقم الهاتف',
     full_name: 'الاسم بالكامل',

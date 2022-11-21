@@ -32,7 +32,7 @@
                                         :key="index"
                                         :id="`tab-${item.id}`"
                                     >
-                                       <v-card color="accent" class="rounded-xl" outlined height="400">
+                                       <v-card color="accent" class="rounded-xl" outlined min-height="300">
                                             <v-card-title class="white mb-10">
                                                 <div class="d-flex align-center">
                                                     <v-img :src="item.image" width="20" class="mr-3"></v-img>
