@@ -21,6 +21,13 @@
     "_name": "_7ad28de0"
   },
   {
+    "name": "blog___en",
+    "path": "/blog",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/blog/index.vue",
+    "chunkName": "pages/blog/index",
+    "_name": "_728a1557"
+  },
+  {
     "name": "careers___en",
     "path": "/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
@@ -133,6 +140,13 @@
     "_name": "_3e0feee5"
   },
   {
+    "name": "blog___ar",
+    "path": "/ar/blog",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/blog/index.vue",
+    "chunkName": "pages/blog/index",
+    "_name": "_728a1557"
+  },
+  {
     "name": "careers___ar",
     "path": "/ar/careers",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/careers/index.vue",
@@ -231,11 +245,25 @@
     "_name": "_b9691d6e"
   },
   {
+    "name": "blog-id___ar",
+    "path": "/ar/blog/:id",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/blog/_id.vue",
+    "chunkName": "pages/blog/_id",
+    "_name": "_337b817f"
+  },
+  {
     "name": "cinema-id___ar",
     "path": "/ar/cinema/:id",
     "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/cinema/_id.vue",
     "chunkName": "pages/cinema/_id",
     "_name": "_4bda074e"
+  },
+  {
+    "name": "blog-id___en",
+    "path": "/blog/:id",
+    "component": "/Users/bryanpardo/Sandbox/work/fndevcs/pages/blog/_id.vue",
+    "chunkName": "pages/blog/_id",
+    "_name": "_337b817f"
   },
   {
     "name": "cinema-id___en",

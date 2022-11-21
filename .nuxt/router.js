@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _20d03a93 = () => interopDefault(import('../pages/about-us/index.vue' /* webpackChunkName: "pages/about-us/index" */))
 const _3e0feee5 = () => interopDefault(import('../pages/advertising/index.vue' /* webpackChunkName: "pages/advertising/index" */))
 const _7ad28de0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _728a1557 = () => interopDefault(import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */))
 const _3431c236 = () => interopDefault(import('../pages/careers/index.vue' /* webpackChunkName: "pages/careers/index" */))
 const _25433934 = () => interopDefault(import('../pages/cinema/index.vue' /* webpackChunkName: "pages/cinema/index" */))
 const _73a6183e = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
@@ -21,6 +22,7 @@ const _2f2a220c = () => interopDefault(import('../pages/privacy-policy/index.vue
 const _03a21e13 = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
 const _bf78f584 = () => interopDefault(import('../pages/shops/index.vue' /* webpackChunkName: "pages/shops/index" */))
 const _b9691d6e = () => interopDefault(import('../pages/train/index.vue' /* webpackChunkName: "pages/train/index" */))
+const _337b817f = () => interopDefault(import('../pages/blog/_id.vue' /* webpackChunkName: "pages/blog/_id" */))
 const _4bda074e = () => interopDefault(import('../pages/cinema/_id.vue' /* webpackChunkName: "pages/cinema/_id" */))
 
 const emptyFn = () => {}
@@ -46,6 +48,10 @@ export const routerOptions = {
     path: "/ar",
     component: _7ad28de0,
     name: "index___ar"
+  }, {
+    path: "/blog",
+    component: _728a1557,
+    name: "blog___en"
   }, {
     path: "/careers",
     component: _3431c236,
@@ -111,6 +117,10 @@ export const routerOptions = {
     component: _3e0feee5,
     name: "advertising___ar"
   }, {
+    path: "/ar/blog",
+    component: _728a1557,
+    name: "blog___ar"
+  }, {
     path: "/ar/careers",
     component: _3431c236,
     name: "careers___ar"
@@ -167,9 +177,17 @@ export const routerOptions = {
     component: _b9691d6e,
     name: "train___ar"
   }, {
+    path: "/ar/blog/:id",
+    component: _337b817f,
+    name: "blog-id___ar"
+  }, {
     path: "/ar/cinema/:id",
     component: _4bda074e,
     name: "cinema-id___ar"
+  }, {
+    path: "/blog/:id",
+    component: _337b817f,
+    name: "blog-id___en"
   }, {
     path: "/cinema/:id",
     component: _4bda074e,

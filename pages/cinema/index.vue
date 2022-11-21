@@ -226,7 +226,6 @@ export default {
             switch(whichArray) {
                 case 'latest_movies':
                     this.movieInfo = this.latest_movies[this.selected];
-                    console.log(this.movieInfo);
                     this.$router.push(`/cinema/${this.movieInfo.id}`)
                     break;
             }

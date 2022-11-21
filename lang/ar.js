@@ -9,6 +9,7 @@ export default {
     phone: `${settings?.phone} رقم`,
     address: settings?.address,
     contact: 'اتصل بنا',
+    blog: 'مقالات',
     about: 'نبذة عنا',
     advertising: 'الاعلانات',
     leasing: 'الايجارات',
@@ -43,5 +44,6 @@ export default {
         events: 'الفعاليات',
         services: 'الخدمات',
         offers: 'العروض',
+        blog: 'مقالات',
     }
 }

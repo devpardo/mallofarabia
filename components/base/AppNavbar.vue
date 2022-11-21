@@ -52,7 +52,8 @@ export default {
                 { name: 'Train', lang: 'train', children: [], to: '/train' },
                 { name: 'Events', lang: 'events', children: [], to: '/events' },
                 { name: 'Services', lang: 'services', children: [], to: '/services' },
-                { name: 'Offers', lang: 'offers', children: [], to: '/offers' }
+                { name: 'Offers', lang: 'offers', children: [], to: '/offers' },
+                { name: 'Blog', lang: 'blog', to: '/blog' }
             ]
         }
     },

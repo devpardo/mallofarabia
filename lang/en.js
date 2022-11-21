@@ -8,6 +8,7 @@ export default {
     phone: settings?.phone,
     address: settings?.address,
     contact: 'Contact Us',
+    blog: 'Blog',
     about: 'About Us',
     advertising: 'Advertising',
     leasing: 'Leasing',
@@ -42,5 +43,6 @@ export default {
         events: 'Events',
         services: 'Services',
         offers: 'Offers',
+        blog: 'Blog'
     }
 }
