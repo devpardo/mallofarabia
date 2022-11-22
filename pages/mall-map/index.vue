@@ -45,8 +45,13 @@ export default {
     methods: {
         async pull() {
             try {
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
                 this.loading = true;
-                let res =  await this.$api.get('/mall_map');
+                let res =  await this.$api.get('/mall_map', head);
                 this.contents = {...res}
                 this.loading = false;
             } catch (error) {

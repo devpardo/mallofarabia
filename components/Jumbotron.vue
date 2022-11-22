@@ -74,11 +74,18 @@ export default {
         }
     },
     mounted() {
-        this.pull();
+       this.pull()
     },
     methods: {
         async pull() {
-            this.$api.get('/sliders').then(res => {
+            console.log(this.$i18n.locale);
+            console.log(localStorage.getItem('lang'));
+            let head = {
+                headers: {
+                    'x-locale': this.$i18n.locale
+                }
+            }
+            this.$api.get('/sliders', head).then(res => {
                 this.slides = res.data.data;
             });
         },

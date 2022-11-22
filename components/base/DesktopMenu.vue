@@ -80,23 +80,25 @@
 
                     
 
-                    <span class="mr-3 link-item py-1">
-                       <nuxt-link
-                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-3 v-btn--outlined mt-3"
-                            tag="button"
-                            v-if="$i18n.locale !== 'en'"
-                            :to="switchLocalePath('en')"
-                            >
-                            en
-                        </nuxt-link>
-
+                    <span class="mr-3 link-item py-1" v-if="$i18n.locale == 'en'">
                         <nuxt-link
+                            v-on:click.native="setLanguage('ar')"
                             class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-3 v-btn--outlined mt-3"
                             tag="button"
-                            v-if="$i18n.locale !== 'ar'"
                             :to="switchLocalePath('ar')"
                             >
                             عربى
+                        </nuxt-link>
+                    </span>
+
+                    <span v-if="$i18n.locale == 'ar'">
+                         <nuxt-link
+                            v-on:click.native="setLanguage('en')"
+                            class="text-lowercase v-btn v-btn--text theme--light pa-0 px-1 caption v-btn--outlined mt-3 v-btn--outlined mt-3"
+                            tag="button"
+                            :to="switchLocalePath('en')"
+                            >
+                            en
                         </nuxt-link>
                     </span>
                 </div>
@@ -126,6 +128,17 @@ export default {
         ...mapGetters('settings', ['siteSettings'])
     },
     methods: {
+        ...mapActions('settings', ['setLang']),
+        setLanguage(param) {
+            if(process.browser) {
+                console.log(param);
+                localStorage.removeItem('lang');
+                localStorage.setItem('lang', param)
+            }
+
+            console.log(process.browser);
+            
+        },
         go(param) {
             this.$router.push(param);
         }

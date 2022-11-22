@@ -121,7 +121,12 @@ export default {
         },
         async pull() {
             try {
-                let res = await this.$api.get(`/cinemas/${this.$route.params.id}`);
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
+                let res = await this.$api.get(`/cinemas/${this.$route.params.id}`, head);
                 this.movie = res.data.movie;
             } catch (error) {
                 console.log(error)

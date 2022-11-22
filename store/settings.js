@@ -1,6 +1,7 @@
 const state = () => ({
     settings: null,
-    loading: true
+    loading: true,
+    lang: 'en'
 })
   
 const getters = {
@@ -9,6 +10,9 @@ const getters = {
     },
     isLoading() {
         return state.loading
+    },
+    lang() {
+        return state.lang
     }
 }
   
@@ -18,7 +22,10 @@ const mutations = {
     },
     setLoading(state, payload) {
         state.loading = payload
-    }
+    },
+    setLang(state, payload) {
+        state.lang = payload
+    },
 }
   
 const actions = {
@@ -28,8 +35,15 @@ const actions = {
         let settings = await this.$api.get('/settings');
         
         commit('setSettings', settings.data.data);
-        window.localStorage.setItem('settings', JSON.stringify(settings.data.data));
+        localStorage.setItem('settings', JSON.stringify(settings.data.data));
         commit('setLoading', false);
+    },
+    setLang({commit}, value) {
+        //localStorage.setItem('lang', value);
+
+        console.log('---------');
+        console.log(localStorage.getItem('lang'));
+        commit('setLang', value);
     }
 }
 

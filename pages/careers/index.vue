@@ -17,7 +17,7 @@
                                 </v-card-title>
                                 
                                 <v-card-text>
-                                    <span class="caption">Created at: {{ content.created_at }}</span>
+                                    <span class="caption">mounted at: {{ content.mounted_at }}</span>
                                 </v-card-text>
 
                                 <v-divider class="my-1"></v-divider>
@@ -67,8 +67,13 @@ export default {
     methods: {
         async pull() {
             try {
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
                 this.loading = true;
-                let res =  await this.$api.get('/careers');
+                let res =  await this.$api.get('/careers', head);
                 this.contents = {...res.data}
                 this.loading = false;
             } catch (error) {

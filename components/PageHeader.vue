@@ -1,9 +1,17 @@
 <template>
-    <v-row no-gutters class="page-header white--text primary" :style="pageBg">
-        <v-col :class="vb.smAndDown ? 'gradient' : 'page-header-banner' " class="d-flex align-center justify-center">
-            <v-container class="text-left">
-                <h1>{{ title }}</h1>
-                <p>{{ subtitle }}</p>
+    <v-row no-gutters class="page-header white--text primary" :class="$i18n.locale == 'en' ? 'bg-right' : 'bg-left'" :style="pageBg">
+        <v-col :class="{
+                'gradient' : vb.smAndDown,
+                'page-header-banner': !vb.smAndDown,
+                'bg-flipped': $i18n.locale == 'ar',
+                'bg-unflipped': $i18n.locale == 'en'
+            }" 
+            class="d-flex align-center justify-center">
+            <v-container>
+                <div :dir="direction">
+                    <h1>{{ title }}</h1>
+                    <p>{{ subtitle }}</p>
+                </div>
             </v-container>
         </v-col>
     </v-row>
@@ -27,6 +35,18 @@ export default {
     computed: {
         vb() {
             return this.$vuetify.breakpoint;
+        },
+        direction() {
+            if(process.browser) {
+
+                if(this.$i18n.locale == 'ar') {
+                    return 'rtl'
+                } else {
+                    return 'ltr'
+                }
+
+                
+            }
         }
     }
 }
@@ -35,18 +55,33 @@ export default {
 <style lang="scss" scoped>
 .page-header {
     height: 300px;
-    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 
     .page-header-banner {
-        background-image: url('../assets/images/banner.png');
         background-size: cover;
-        background-position: -20vw;
     }
 
     .gradient {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     }
+}
+
+.bg-right {
+    background-position: right;
+}
+
+.bg-left {
+    background-position: left;
+}
+
+.bg-flipped {
+    background-image: url('../assets/images/banner-ar.png');
+    background-position: right;
+}
+
+.bg-unflipped {
+    background-image: url('../assets/images/banner.png');
+    background-position: -20vh;
 }
 </style>

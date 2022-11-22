@@ -109,17 +109,21 @@ export default {
         }
     },
     mounted() {
-        window.addEventListener('resize', () => {
-            this.menuShown = false;
-        })
+        if(process.browser) {
+            window.addEventListener('resize', () => {
+                this.menuShown = false;
+            })
+        }
     },
     computed: {
         ...mapGetters('settings', ['siteSettings'])
     },
     beforeUpdate() {
-        window.removeEventListener('resize', () => {
-            console.log('removed');
-        })
+        if(process.browser) {
+            window.removeEventListener('resize', () => {
+                console.log('removed');
+            })
+        }
     },
     methods: {
         menuActionClick(param) {

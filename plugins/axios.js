@@ -10,4 +10,4 @@ export default function ({ $axios }, inject) {
   
     // Inject to context as $api
     inject('api', api)
-}
+}   

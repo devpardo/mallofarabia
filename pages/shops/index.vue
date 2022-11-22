@@ -198,8 +198,13 @@ export default {
     },
     async pull() {
       try {
+        let head = {
+            headers: {
+                'x-locale': this.$i18n.locale
+            }
+        }
         this.loading = true;
-        let res = await this.$api.get("/shops");
+        let res = await this.$api.get("/shops", head);
         this.contents = { ...res.data };
 
         let categories = await this.$api.get("/section_categories");

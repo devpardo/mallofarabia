@@ -82,8 +82,13 @@ export default {
         },
         async pull() {
             try {
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
                 this.loading = true;
-                let res =  await this.$api.get('/cinemas');
+                let res =  await this.$api.get('/cinemas', head);
                 this.contents = {...res.data}
 
                 this.latest_movies = this.contents?.latest_movies;

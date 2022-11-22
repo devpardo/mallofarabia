@@ -66,7 +66,12 @@ export default {
     },
     methods: {
         async pull() {
-            this.$api.get('/latest_news').then(res => {
+            let head = {
+                headers: {
+                    'x-locale': this.$i18n.locale
+                }
+            }
+            this.$api.get('/latest_news', head).then(res => {
                 this.slides = res.data.data;
 
                 if(res.data.data.length) {

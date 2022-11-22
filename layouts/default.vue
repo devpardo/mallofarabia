@@ -31,11 +31,13 @@ export default {
   computed: {
     ...mapGetters('settings', ['siteSettings', 'isLoading'])
   },
-  created() {
-    this.setSettings();
+  mounted() {
+    if(process.browser) {
+      this.setSettings();
+    }
   },
   methods: {
-    ...mapActions('settings', ['setSettings']),
+    ...mapActions('settings', ['setSettings', 'setLang']),
   }
 }
 </script>

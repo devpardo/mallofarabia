@@ -18,7 +18,7 @@
                 </v-slide-group>
 
                 <div class="d-flex flex-wrap" v-else>
-                     <FeatureCard class="mb-2" v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
+                    <FeatureCard class="mb-2" v-for="(cat, key) in section.categories" :key="key" :title="cat.name" :img="cat.image" />
                 </div>
             </v-col>
         </v-row>
@@ -38,26 +38,6 @@ export default {
     data() {
         return {
             sections: [],
-            items: {
-                shop: [
-                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
-                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
-                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' },
-                    { title: 'Accessories', image: 'https://wp.missmalini.com/wp-content/uploads/2019/09/BeFunky-collage-27-4.jpg' }
-                ],
-                dine: [
-                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
-                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
-                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' },
-                    { title: 'Food', image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg' }
-                ],
-                entertainment: [
-                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
-                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
-                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' },
-                    { title: 'Show', image: 'https://media.wired.co.uk/photos/606d9ea06a2b7484dab92d37/master/w_1600,c_limit/wired-movie-industry.jpg' }
-                ]
-            }
         }
     },
     computed: {
@@ -70,7 +50,12 @@ export default {
     },
     methods: {
         async pull() {
-            await this.$api.get('/tenants_sections').then(res => {
+            let head = {
+                headers: {
+                    'x-locale': this.$i18n.locale
+                }
+            }
+            await this.$api.get('/tenants_sections', head).then(res => {
                 this.sections = res.data.data;
             })
         }

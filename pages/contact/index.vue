@@ -38,8 +38,13 @@ export default {
     methods: {
         async pull() {
             try {
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
                 this.loading = true;
-                let res =  await this.$api.get('/contact_us');
+                let res =  await this.$api.get('/contact_us', head);
                 this.contents = {...res.data.data}
                 this.loading = false;
             } catch (error) {

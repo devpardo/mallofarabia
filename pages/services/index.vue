@@ -91,8 +91,13 @@ export default {
         },
         async pull() {
             try {
+                let head = {
+                    headers: {
+                        'x-locale': this.$i18n.locale
+                    }
+                }
                 this.loading = true;
-                let res =  await this.$api.get('/services');
+                let res =  await this.$api.get('/services', head);
                 this.contents = {...res.data}
                 this.loading = false;
             } catch (error) {
