@@ -36,6 +36,12 @@ export default {
     train: 'تدريب',
     advertisingText: 'يقدم مول العرب عدد غير محدود من الميديا لدفععلاماتك التجارية',
     leasingText: 'تواصل معنا للحصول على افضل الفرص الايجارية',
+
+    available: 'متوفرة',
+    previous: 'السابق',
+
+    latest_movies: '',
+
     links: {
         shop: 'تسوق',
         dine: 'المطاعم',

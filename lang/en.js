@@ -33,6 +33,8 @@ export default {
     cinema: 'Cinema',
     events: 'Events',
     train: 'Train',
+    available: 'Available',
+    previous: 'Previous',
     advertisingText: 'Mall of Tanta offers your business unlimited media options to advertise and promote your brand',
     leasingText: 'Connect to submit your leasing interest in our shopping malls.',
     links: {
