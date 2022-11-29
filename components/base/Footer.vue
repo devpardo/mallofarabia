@@ -4,7 +4,7 @@
         <v-container class="mt-10">
             <v-row class="mt-10">
                 <v-col cols="12" md="4">
-                    <div class="d-flex flex-column align-start justify-start " dir="auto">
+                    <div class="d-flex flex-column align-start justify-start " >
 
 
                         <v-img block contain max-width="150" class="mb-5" :src="siteSettings?.logo_en" v-if="$i18n.locale !== 'ar'"/>
@@ -41,8 +41,8 @@
                     </div>
                 </v-col>
                 <v-col cols="12" md="2" v-for="(field, key) in footer_links" :key="key">
-                    <h3 class="text-capitalize mb-3" dir="auto">{{ $t(key) }}</h3>
-                    <div dir="auto" v-for="(item, index) in footer_links[key]" :key="index" class="pa-0 flex-column">
+                    <h3 class="text-capitalize mb-3" >{{ $t(key) }}</h3>
+                    <div  v-for="(item, index) in footer_links[key]" :key="index" class="pa-0 flex-column">
                         <a href="#" class="footer-link d-block mb-2 py-2">{{ item.title }}</a>
                     </div>
                 </v-col>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col dir="auto" cols="12" sm="12" md="6" lg="3" class="caption text-center text-sm-center"
+                <v-col  cols="12" sm="12" md="6" lg="3" class="caption text-center text-sm-center"
                 :class="$i18n.locale == 'en' ? ['text-md-left'] : ['text-md-right']">
                     <p>{{ $t('copyright') }}</p>
                     <a href="#"> {{ $t('privacy') }}</a>

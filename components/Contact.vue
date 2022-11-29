@@ -13,8 +13,8 @@
                 <v-col cols="12" md="6" :order="$i18n.locale == 'en' ? 'first': 'last'">
                     <div class="d-flex align-center justify-start fill-height" :class="vb.smAndDown ? 'pa-1' : 'pa-5'">
                         <div class="d-flex flex-column" style="width: 100%">
-                            <h1 dir="auto" class="text-uppercase">{{ $t('contact_us') }}</h1>
-                            <p dir="auto">{{ $t('contact_tagline')}}</p>
+                            <h1  class="text-uppercase">{{ $t('contact_us') }}</h1>
+                            <p >{{ $t('contact_tagline')}}</p>
                         </div>
                     </div>
                 </v-col>

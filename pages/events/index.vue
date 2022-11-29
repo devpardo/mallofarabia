@@ -12,7 +12,7 @@
                         <v-col v-else>
                             <v-row>
                                 <v-col cols="12">
-                                    <v-row dir="auto">
+                                    <v-row >
                                         <v-tabs
                                             @change="pull()"
                                             v-model="model"

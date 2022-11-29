@@ -30,7 +30,7 @@
                                 <v-col cols="12" sm="12" md="5">
                                     
                                     <div class="d-flex flex-column">
-                                        <div dir="auto" class="mb-5 mt-10">
+                                        <div  class="mb-5 mt-10">
                                             <h1 class="accent--text">{{ $t(item.title_translate) }}</h1>
                                         </div>
 

@@ -51,7 +51,7 @@
                                 </v-col>
                                 <v-col cols="12" md="9" class="pa-5">
                                     <v-card class="mb-3 pb-3 px-3 pt-5" v-for="(content, index) in contents.data" :key="index" >
-                                        <v-card-title class="d-flex justify-space-between align-center" dir="auto">
+                                        <v-card-title class="d-flex justify-space-between align-center" >
                                             <div>
                                                  <v-img v-if="$i18n.locale !== 'ar'" :src="content.logo_en" contain width="100"></v-img>
                                                  <v-img v-else :src="content.logo_ar" contain width="100"></v-img>

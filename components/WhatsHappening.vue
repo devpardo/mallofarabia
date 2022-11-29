@@ -1,6 +1,6 @@
 <template>
     <v-container class="mb-10" ref="whatshappening">
-        <h1 dir="auto"> {{ $t('title_event') }} </h1>
+        <h1 > {{ $t('title_event') }} </h1>
 
         <div class="mt-10 text-center">
             <h1>{{ carouselTitle }}</h1>

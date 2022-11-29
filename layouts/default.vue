@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :class="$i18n.locale == 'ar' ? 'page-direction' : ''">
     <v-main v-if="!isLoading">
       <Loading :loading="isLoading"/>
       <AppNavbar />
@@ -43,6 +43,9 @@ export default {
 </script>
 
 <style>
+.page-direction {
+  direction: rtl;
+}
 </style>
 
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-row no-gutters dir="auto">
+        <v-row no-gutters >
             <v-col cols="5">
                 <div class="d-flex">
                     <div v-for="(item, index) in links.linksLeft" :key="index" class="text-center flex-grow-1 d-flex align-center justify-center">
@@ -41,7 +41,7 @@
 
         <v-row class="mb-1">
             <v-container class="mt-0">
-                <div class="main-links d-flex align-start justify-start" dir="auto">
+                <div class="main-links d-flex align-start justify-start" >
                     <span v-for="(item, index) in mainLinks" :key="index" 
                         class="mr-3 text-capitalize link-item py-1">
 

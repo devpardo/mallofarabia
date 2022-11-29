@@ -5,8 +5,8 @@
         <v-row class="mb-10 mt-10" v-for="(section, index) in sections" :key="index">
             <v-col cols="12" md="3" class="d-flex align-start justify-start" :order="vb.smAndDown || index % 2 == 0 ? 'first': 'last'">
                 <div>
-                    <h2 dir="auto" class="mb-10">{{ $t(section.name.toLowerCase()) }}</h2>
-                    <p dir="auto">{{ section.description }}</p>
+                    <h2  class="mb-10">{{ $t(section.name.toLowerCase()) }}</h2>
+                    <p >{{ section.description }}</p>
                     <a href="#" class="more-text pa-0 px-1 text-capitalize font-weight-bold">
                         More <v-icon class="ml-2">$vuetify.icons.values.moa_arrow</v-icon>
                     </a>

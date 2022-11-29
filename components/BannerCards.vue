@@ -12,8 +12,8 @@
                                 gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                             >
                                 <div class="mx-auto" style="width: 300px">
-                                    <h2 dir="auto">{{ $t('advertising') }}</h2>
-                                    <p dir="auto">{{ $t('advertisingText') }}</p>
+                                    <h2 >{{ $t('advertising') }}</h2>
+                                    <p >{{ $t('advertisingText') }}</p>
                                 </div> 
 
                                 <v-fade-transition>
@@ -41,8 +41,8 @@
                                 gradient="to bottom, rgba(0, 35, 75,.1), rgba(0, 35, 75,.5)"
                             >
                                 <div class="mx-auto" style="width: 300px">
-                                    <h2 dir="auto">{{ $t('leasing') }}</h2>
-                                    <p dir="auto">{{ $t('leasingText') }}</p>
+                                    <h2 >{{ $t('leasing') }}</h2>
+                                    <p >{{ $t('leasingText') }}</p>
                                 </div> 
 
                                 <v-fade-transition>

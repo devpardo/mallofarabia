@@ -46,7 +46,7 @@
                         <!-- <v-list-group class="mb-2 rounded-lg pill-menu" v-if="item?.children">
                             <template v-slot:activator>
                                 <v-list-item-content>
-                                    <v-list-item-title dir="auto">{{ $t(`links.${item.lang}`) }}</v-list-item-title>
+                                    <v-list-item-title >{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                                 </v-list-item-content>
                             </template>
 
@@ -56,14 +56,14 @@
                                 @click="menuActionClick(item)"
                             >
                                 <v-list-item-content>
-                                    <v-list-item-title v-text="child.name" dir="auto"></v-list-item-title>
+                                    <v-list-item-title v-text="child.name" ></v-list-item-title>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-group> -->
 
                         <v-list-item @click="menuActionClick(item)" class="mb-2 rounded-lg pill-menu">
                             <v-list-item-content>
-                                <v-list-item-title dir="auto">{{ $t(`links.${item.lang}`) }}</v-list-item-title>
+                                <v-list-item-title >{{ $t(`links.${item.lang}`) }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                     </div>
@@ -74,7 +74,7 @@
                 <v-list class="mt-10 mb-10">
                     <v-list-item class="item-link mb-2" v-for="(item, index) in links" :key="index">
                         <v-list-item-content @click="go(item.to)">
-                            <v-list-item-title class="item-link-title" dir="auto">
+                            <v-list-item-title class="item-link-title" >
                                 <v-icon class="mr-1 icon">{{ item.icon }}</v-icon> {{ $t(item.lang) }}
                             </v-list-item-title>
                         </v-list-item-content>
